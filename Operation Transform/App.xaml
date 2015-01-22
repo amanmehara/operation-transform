@@ -1,0 +1,24 @@
+﻿<Application
+    x:Class="Operation_Transform.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/ResourceDictionaries/ApplicationBackNavigationButton.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/ApplicationName.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/Colors.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/MainPageComponents.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/LanguagesPageComponents.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/NavigationGridComponents.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/OtherAppsComponents.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/ProgramComponents.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/ProgramListGridComponents.xaml" />
+                <ResourceDictionary Source="Assets/ResourceDictionaries/SettingsFlyoutComponents.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

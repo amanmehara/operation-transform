@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="Operation_Transform.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{StaticResource ApplicationBackgroundColor}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Style="{StaticResource MainPageScrollViewer}">
+            <StackPanel>
+                <Grid Background="{StaticResource ApplicationMainColor}">
+                    <Image x:Name="MainApplicationLogo"
+                               Width="320"
+                               Source="Assets/Images/InAppWideLogo.png"
+                               HorizontalAlignment="Center"/>
+                </Grid>
+                <Grid Background="{StaticResource MainPageEmphasizedColor}">
+                    <TextBlock Style="{StaticResource MainPageDescription}">
+                            <Run Foreground="{StaticResource ApplicationBackgroundColor}"
+                                 FontSize="32"
+                                 Text="Programming!" />
+                    	<LineBreak />
+                    	<Run Foreground="{StaticResource ApplicationBackgroundColor}"
+                             FontStyle="Italic"
+                             FontSize="24"
+                             Text="    -Get the Code!!" />
+                    </TextBlock>
+                </Grid>
+                <TextBlock x:Name="ApplicationDescription"
+                               Style="{StaticResource MainPageDescription}">                    	
+                    	<Run Text="It provides the most commonly used code snippets and important algorithms in the following programming languages in a comprehensive way." />
+                    	<LineBreak />
+                    	<Run FontStyle="Italic"
+                             FontSize="24"
+                             Text="(C, C++, C#, Java, SQL, JavaScript, PHP &amp; MATLAB)" />
+                    	<LineBreak />
+                    	<Run />
+                    	<LineBreak />
+                    	<Run Text="This application also incorporates jQuery, the cross-platform JavaScript library, designed to simplify the client-side scripting of HTML." />
+                        <Run Text="Also included, is the Open Graphics Library (Open GL) , which is a cross-language, multi-platform application programming interface (API) for rendering 2D and 3D vector graphics." />
+                    	<LineBreak />
+                    	<Run />
+                    	<LineBreak />
+                    	<Run Text="It also introduces to us the mechanism of solving complex problem effortlessly using several Data Structures like arrays, linked lists, hash tables &amp; trees. Through this application we are granted access to numerous widely used algorithms implementing Data Structures &amp; learn its plethora applications." />
+                    	<Run Text="The programs included under the Recursion section helps us to comprehend the mechanism of recursion. These programs guides us to formulate facile recursive solutions of otherwise enigmatic problems." />
+                    	<LineBreak />
+                    	<Run />
+                    	<LineBreak />
+                    	<Run FontStyle="Italic"
+                             FontSize="24"
+                             Foreground="Purple"
+                             Text="Thus it serves as an excellent reference for students &amp; professionals equally." />
+                    	<LineBreak />
+                    	<Run />
+                    	<LineBreak />
+                    	<Run Text="These code snippets &amp; algorithms are written in a clear uncompromising style with comments to enhance comprehensibility, enabling you to have a good grasp of the concept." />
+                        <LineBreak />
+                        <Run />
+                </TextBlock>
+                <Grid Background="{StaticResource MainPageEmphasizedColor}">
+                    <TextBlock Style="{StaticResource MainPageDescription}">
+                            <Run Foreground="{StaticResource ApplicationBackgroundColor}"
+                                 FontSize="24"
+                                 FontStyle="Italic"
+                                 Text="So lets start learning the versatility of Programming! through the code snippets, programs &amp; examples provided in this application." />
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button x:Name="GetStarted"
+                    Style="{StaticResource MainPageButton}"
+                    Content="Get Started!" 
+                    Click="GetStarted_Click" />
+
+    </Grid>
+</Page>
