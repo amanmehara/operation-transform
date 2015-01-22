@@ -1,0 +1,250 @@
+﻿<Page
+    x:Class="Operation_Transform.CPrograms.isEven"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.CPrograms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="isEven?"
+                       Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                               Text="isEven.c" />
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="Blue">
+                    		<Run Text="#include" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&lt;stdio.h&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Blue">
+                    		<Run Text="#include" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&lt;stdbool.h&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Blue">
+                    		<Run Text="int" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" main() {" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" number;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;isEven? \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Enter the number to be checked \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;scanf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;%d&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", &amp;number);" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="bool" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" isEven = " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="true" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="//Even number checker" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="if" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (number % 2 != 0) {" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;isEven = " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="false" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="if" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (isEven) {" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;It is an Even Number \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="else" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" {" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Not an Even Number \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="return" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" 0;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="}" />
+                    	</Span>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>
