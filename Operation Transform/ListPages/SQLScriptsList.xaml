@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="Operation_Transform.ListPages.SQLScriptsList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.ListPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="{StaticResource SQL}"
+                       Style="{StaticResource ProgramListMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramListScrollViewer}">
+                <StackPanel>
+                    <Button x:Name="CreateDatabase" 
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Create Database"
+                            Tag="CreateDatabase"
+                            Click="SQLCodeNavigation_Click"/>
+                    <Button x:Name="DeleteDatabase"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Delete Database"
+                            Tag="DeleteDatabase"
+                            Click="SQLCodeNavigation_Click" />
+                    <Button x:Name="UseDatabase"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Use Database"
+                            Tag="UseDatabase"
+                            Click="SQLCodeNavigation_Click" />
+                    <Button x:Name="AlterDatabase"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Alter Database"
+                            Tag="AlterDatabase"
+                            Click="SQLCodeNavigation_Click" />
+
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

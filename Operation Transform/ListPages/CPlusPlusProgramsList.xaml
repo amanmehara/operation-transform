@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="Operation_Transform.ListPages.CPlusPlusProgramsList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.ListPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="{StaticResource CPlusPlus}"
+                       Style="{StaticResource ProgramListMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->        
+        <ScrollViewer Style="{StaticResource ProgramListScrollViewer}">
+            <StackPanel>
+                <Button x:Name="HeloWorld"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="Hello World"
+                        Tag="HelloWorld"
+                        Click="CPlusPlusCodeNavigation_Click"/>
+                <Button x:Name="Comments"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="Comments"
+                        Tag="Comments"
+                        Click="CPlusPlusCodeNavigation_Click" />
+                <Button x:Name="SwapUsingTemporaryVariable"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="Swap (Using Temporary Variable)"
+                        Tag="SwapUsingTemporaryVariable"
+                        Click="CPlusPlusCodeNavigation_Click" />
+                <Button x:Name="isEven"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="isEven?"
+                        Tag="isEven"
+                        Click="CPlusPlusCodeNavigation_Click" />
+                <Button x:Name="isOdd"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="isOdd?"
+                        Tag="isOdd"
+                        Click="CPlusPlusCodeNavigation_Click" />
+                <Button x:Name="forLoop"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="For Loop"
+                        Tag="ForLoop"
+                        Click="CPlusPlusCodeNavigation_Click" />
+                <Button x:Name="ArithmeticProgression"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="Arithmetic Progression"
+                        Tag="ArithmeticProgression"
+                        Click="CPlusPlusCodeNavigation_Click" />
+                <Button x:Name="GeometricProgression"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="Geometric Progression"
+                        Tag="GeometricProgression"
+                        Click="CPlusPlusCodeNavigation_Click" />
+                <Button x:Name="isPrime"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="isPrime?"
+                        Tag="isPrime"
+                        Click="CPlusPlusCodeNavigation_Click" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

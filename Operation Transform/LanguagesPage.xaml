@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="Operation_Transform.LanguagesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="{StaticResource AppName}" 
+                       Style="{StaticResource LanguagesPageHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <GridView Style="{StaticResource LanguagesPageGridView}">
+            <Button x:Name="CProgramsList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="C Programs"
+                        Click="CProgramsList_Click" />
+            <Button x:Name="CPlusPlusProgramsList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="C++ Programs"
+                        Click="CPlusPlusProgramsList_Click" />
+            <!--<Button x:Name="CSharpProgramsList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="C# Programs"
+                        Click="CSharpProgramsList_Click" />
+            <Button x:Name="JavaProgramsList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="Java Programs"
+                        Click="JavaProgramsList_Click" />
+            <Button x:Name="RecursionList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="Recursion"
+                        Click="RecursionList_Click" />
+            <Button x:Name="DataStructuresList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="Data Structures"
+                        Click="DataStructuresList_Click" />-->
+            <Button x:Name="SQLScriptsList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="SQL Scripts"
+                        Click="SQLScriptsList_Click" />
+            <Button x:Name="JavaScriptList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="JavaScript"
+                        Click="JavaScriptList_Click" />
+            <!--<Button x:Name="jQueryList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="jQuery"
+                        Click="jQueryList_Click" />
+            <Button x:Name="PHPScriptsList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="PHP Scripts"
+                        Click="PHPScriptsList_Click" />
+            <Button x:Name="OtherAppsList"
+                        Style="{StaticResource LanguagesPageButton}"
+                        Content="Other Apps"
+                        Click="OtherAppsList_Click" />-->
+        </GridView>
+    </Grid>
+</Page>
