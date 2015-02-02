@@ -148,6 +148,45 @@
     <Compile Include="CPrograms\SwapUsingTemporaryVariable.xaml.cs">
       <DependentUpon>SwapUsingTemporaryVariable.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CSharpPrograms\ArithmeticProgression.xaml.cs">
+      <DependentUpon>ArithmeticProgression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\Comments.xaml.cs">
+      <DependentUpon>Comments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\GeometricProgression.xaml.cs">
+      <DependentUpon>GeometricProgression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\HelloWorld.xaml.cs">
+      <DependentUpon>HelloWorld.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\isEven.xaml.cs">
+      <DependentUpon>isEven.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\isOdd.xaml.cs">
+      <DependentUpon>isOdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\isPrime.xaml.cs">
+      <DependentUpon>isPrime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\LeapYear.xaml.cs">
+      <DependentUpon>LeapYear.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\NumberReversal.xaml.cs">
+      <DependentUpon>NumberReversal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\SimpleInterestAndAmount.xaml.cs">
+      <DependentUpon>SimpleInterestAndAmount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\SumArithmeticProgression.xaml.cs">
+      <DependentUpon>SumArithmeticProgression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\SumGeometricProgression.xaml.cs">
+      <DependentUpon>SumGeometricProgression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\SumInfiniteGeometricProgression.xaml.cs">
+      <DependentUpon>SumInfiniteGeometricProgression.xaml</DependentUpon>
+    </Compile>
     <Compile Include="JavaScriptPrograms\Comments.xaml.cs">
       <DependentUpon>Comments.xaml</DependentUpon>
     </Compile>
@@ -340,6 +379,58 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\SwapUsingTemporaryVariable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\ArithmeticProgression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\Comments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\GeometricProgression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\HelloWorld.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\isEven.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\isOdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\isPrime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\LeapYear.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\NumberReversal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\SimpleInterestAndAmount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\SumArithmeticProgression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\SumGeometricProgression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\SumInfiniteGeometricProgression.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

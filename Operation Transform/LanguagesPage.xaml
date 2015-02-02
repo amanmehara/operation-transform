@@ -39,11 +39,11 @@
                         Style="{StaticResource LanguagesPageButton}"
                         Content="C++ Programs"
                         Click="CPlusPlusProgramsList_Click" />
-            <!--<Button x:Name="CSharpProgramsList"
+            <Button x:Name="CSharpProgramsList"
                         Style="{StaticResource LanguagesPageButton}"
                         Content="C# Programs"
                         Click="CSharpProgramsList_Click" />
-            <Button x:Name="JavaProgramsList"
+            <!--<Button x:Name="JavaProgramsList"
                         Style="{StaticResource LanguagesPageButton}"
                         Content="Java Programs"
                         Click="JavaProgramsList_Click" />
