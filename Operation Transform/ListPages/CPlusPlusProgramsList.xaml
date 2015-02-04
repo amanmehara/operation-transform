@@ -44,7 +44,7 @@
                         Click="CPlusPlusCodeNavigation_Click" />
                 <Button x:Name="SwapUsingTemporaryVariable"
                         Style="{StaticResource ProgramListButtons}"
-                        Content="Swap (Using Temporary Variable)"
+                        Content="Swap (Using Tempporary Variable)"
                         Tag="SwapUsingTemporaryVariable"
                         Click="CPlusPlusCodeNavigation_Click" />
                 <Button x:Name="isEven"

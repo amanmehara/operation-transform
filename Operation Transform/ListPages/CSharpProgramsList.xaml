@@ -54,7 +54,7 @@
                             Click="CSharpCodeNavigation_Click" />
                     <Button x:Name="SimpleInterestAndAmount"
                             Style="{StaticResource ProgramListButtons}"
-                            Content="Simple Interest And Amount"
+                            Content="Simple Interest &amp; Amount"
                             Tag="SimpleInterestAndAmount"
                             Click="CSharpCodeNavigation_Click" />
                     <Button x:Name="LeapYear"
@@ -84,7 +84,7 @@
                             Click="CSharpCodeNavigation_Click" />
                     <Button x:Name="SumInfiniteGeometricProgression"
                             Style="{StaticResource ProgramListButtons}"
-                            Content="Sum of Infinite Geometric Progression"
+                            Content="Sum of ∞ Geometric Progression"
                             Tag="SumInfiniteGeometricProgression"
                             Click="CSharpCodeNavigation_Click" />
                     <Button x:Name="isPrime"

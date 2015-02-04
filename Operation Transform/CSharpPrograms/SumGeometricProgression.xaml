@@ -24,9 +24,13 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="Sum of Geometric Progression"
-                       Style="{StaticResource ProgramMenuHeader}" 
-                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
+                <Run Text="Sum of G"/>
+                <Run Text="eometric " FontSize="24"/>
+                <Run Text="P"/>
+                <Run Text="rogression" FontSize="24"/>
+            </TextBlock>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
