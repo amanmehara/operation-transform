@@ -26,10 +26,7 @@
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
             <TextBlock Style="{StaticResource ProgramMenuHeader}" 
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
-                <Run Text="Sum of A"/>
-                <Run Text="rithmetic " FontSize="24"/>
-                <Run Text="P"/>
-                <Run Text="rogression" FontSize="24"/>
+                <Run Text="Σ (Arithmetic Progression)"/>
             </TextBlock>
         </StackPanel>
 

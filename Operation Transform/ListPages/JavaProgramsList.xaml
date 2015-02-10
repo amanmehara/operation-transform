@@ -8,7 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -23,13 +24,66 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="MY APPLICATION" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
-            <TextBlock Text="page title" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            <TextBlock Text="{StaticResource Java}"
+                       Style="{StaticResource ProgramListMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
-        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+        <ScrollViewer Style="{StaticResource ProgramListScrollViewer}">
+                <StackPanel>
+                    <Button x:Name="HelloWorld"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Hello World"
+                            Tag="HelloWorld"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="ConsoleInput"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Console Input"
+                            Tag="ConsoleInput"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="SwapUsingTemporaryVariable"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Swap (Using Temporary Variable)"
+                            Tag="SwapUsingTemporaryVariable"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="isEven"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="isEven?"
+                            Tag="isEven"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="isOdd"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="isOdd?"
+                            Tag="isOdd"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="SimpleInterestAndAmount"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Simple Interest &amp; Amount"
+                            Tag="SimpleInterestAndAmount"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="ArithmeticProgression"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Arithmetic Progression"
+                            Tag="ArithmeticProgression"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="GeometricProgression"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Geometric Progression"
+                            Tag="GeometricProgression"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="isPrime"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="isPrime?"
+                            Tag="isPrime"
+                            Click="JavaCodeNavigation_Click" />
+                    <Button x:Name="NumberReversal"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Number Reversal"
+                            Tag="NumberReversal"
+                            Click="JavaCodeNavigation_Click" />
 
-        </Grid>
+                </StackPanel>
+            </ScrollViewer>
     </Grid>
 </Page>

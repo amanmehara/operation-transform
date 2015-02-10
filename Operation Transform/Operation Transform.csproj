@@ -187,11 +187,77 @@
     <Compile Include="CSharpPrograms\SumInfiniteGeometricProgression.xaml.cs">
       <DependentUpon>SumInfiniteGeometricProgression.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JavaPrograms\ArithmeticProgression.xaml.cs">
+      <DependentUpon>ArithmeticProgression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\ConsoleInput.xaml.cs">
+      <DependentUpon>ConsoleInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\GeometricProgression.xaml.cs">
+      <DependentUpon>GeometricProgression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\HelloWorld.xaml.cs">
+      <DependentUpon>HelloWorld.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\isEven.xaml.cs">
+      <DependentUpon>isEven.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\isOdd.xaml.cs">
+      <DependentUpon>isOdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\isPrime.xaml.cs">
+      <DependentUpon>isPrime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\NumberReversal.xaml.cs">
+      <DependentUpon>NumberReversal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\SimpleInterestAndAmount.xaml.cs">
+      <DependentUpon>SimpleInterestAndAmount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JavaPrograms\SwapUsingTemporaryVariable.xaml.cs">
+      <DependentUpon>SwapUsingTemporaryVariable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="JavaScriptPrograms\Comments.xaml.cs">
       <DependentUpon>Comments.xaml</DependentUpon>
     </Compile>
     <Compile Include="JavaScriptPrograms\HelloWorld.xaml.cs">
       <DependentUpon>HelloWorld.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\Animate.xaml.cs">
+      <DependentUpon>Animate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\FadeIn.xaml.cs">
+      <DependentUpon>FadeIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\FadeOut.xaml.cs">
+      <DependentUpon>FadeOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\FadeTo.xaml.cs">
+      <DependentUpon>FadeTo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\FadeToggle.xaml.cs">
+      <DependentUpon>FadeToggle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\Hide.xaml.cs">
+      <DependentUpon>Hide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\Show.xaml.cs">
+      <DependentUpon>Show.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\SlideDown.xaml.cs">
+      <DependentUpon>SlideDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\SlideToggle.xaml.cs">
+      <DependentUpon>SlideToggle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\SlideUp.xaml.cs">
+      <DependentUpon>SlideUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\Stop.xaml.cs">
+      <DependentUpon>Stop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="jQuery\Toggle.xaml.cs">
+      <DependentUpon>Toggle.xaml</DependentUpon>
     </Compile>
     <Compile Include="LanguagesPage.xaml.cs">
       <DependentUpon>LanguagesPage.xaml</DependentUpon>
@@ -231,6 +297,45 @@
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\Abs.xaml.cs">
+      <DependentUpon>Abs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\Ceil.xaml.cs">
+      <DependentUpon>Ceil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\Comments.xaml.cs">
+      <DependentUpon>Comments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\Else.xaml.cs">
+      <DependentUpon>Else.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\ElseIf.xaml.cs">
+      <DependentUpon>ElseIf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\Floor.xaml.cs">
+      <DependentUpon>Floor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\Fmod.xaml.cs">
+      <DependentUpon>Fmod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\GetRandMax.xaml.cs">
+      <DependentUpon>GetRandMax.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\HelloWorld.xaml.cs">
+      <DependentUpon>HelloWorld.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\Hypot.xaml.cs">
+      <DependentUpon>Hypot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\If.xaml.cs">
+      <DependentUpon>If.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\LogTen.xaml.cs">
+      <DependentUpon>LogTen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PHPScripts\Sqrt.xaml.cs">
+      <DependentUpon>Sqrt.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLScripts\AlterDatabase.xaml.cs">
@@ -434,11 +539,99 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="JavaPrograms\ArithmeticProgression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\ConsoleInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\GeometricProgression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\HelloWorld.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\isEven.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\isOdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\isPrime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\NumberReversal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\SimpleInterestAndAmount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JavaPrograms\SwapUsingTemporaryVariable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="JavaScriptPrograms\Comments.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="JavaScriptPrograms\HelloWorld.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\Animate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\FadeIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\FadeOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\FadeTo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\FadeToggle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\Hide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\Show.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\SlideDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\SlideToggle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\SlideUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\Stop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="jQuery\Toggle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -493,6 +686,58 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PHPScripts\Abs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\Ceil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\Comments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\Else.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\ElseIf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\Floor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\Fmod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\GetRandMax.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\HelloWorld.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\Hypot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\If.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\LogTen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PHPScripts\Sqrt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SQLScripts\AlterDatabase.xaml">
       <SubType>Designer</SubType>

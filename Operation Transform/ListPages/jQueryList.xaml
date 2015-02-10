@@ -8,7 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -23,13 +24,76 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="MY APPLICATION" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
-            <TextBlock Text="page title" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            <TextBlock Text="{StaticResource jQuery}"
+                       Style="{StaticResource ProgramListMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
-        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-
-        </Grid>
+        <ScrollViewer Style="{StaticResource ProgramListScrollViewer}">
+                <StackPanel>
+                    <Button x:Name="Show"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Show"
+                            Tag="Show"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="Hide"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Hide"
+                            Tag="Hide"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="Toggle"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Toggle"
+                            Tag="Toggle"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="FadeIn"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Fade In"
+                            Tag="FadeIn"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="FadeOut"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Fade Out"
+                            Tag="FadeOut"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="FadeToggle"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Fade Toggle"
+                            Tag="FadeToggle"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="FadeTo"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Fade To"
+                            Tag="FadeTo"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="SildeDown"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Slide Down"
+                            Tag="SlideDown"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="SlideUp"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Slide Up"
+                            Tag="SlideUp"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="SlideToggle"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Slide Toggle"
+                            Tag="SlideToggle"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="Animate"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Animate"
+                            Tag="Animate"
+                            Click="jQueryCodeNavigation_Click" />
+                    <Button x:Name="Stop"
+                            Style="{StaticResource ProgramListButtons}"
+                            Content="Stop"
+                            Tag="Stop"
+                            Click="jQueryCodeNavigation_Click" />
+                    
+                </StackPanel>
+            </ScrollViewer>
     </Grid>
 </Page>

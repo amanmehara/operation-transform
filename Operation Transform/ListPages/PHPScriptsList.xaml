@@ -8,7 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -23,13 +24,80 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="MY APPLICATION" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
-            <TextBlock Text="page title" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            <TextBlock Text="{StaticResource PHP}"
+                       Style="{StaticResource ProgramListMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
-        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-
-        </Grid>
+        <ScrollViewer Style="{StaticResource ProgramListScrollViewer}">
+            <StackPanel>
+                <Button x:Name="HelloWorld"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="Hello World"
+                        Tag="HelloWorld"
+                        Click="PHPCodeNavigation_Click"/>
+                <Button x:Name="Comments"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="Comments"
+                        Tag="Comments"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="Abs"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="abs"
+                        Tag="Abs"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="Ceil"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="ceil"
+                        Tag="Ceil"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="Floor"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="floor"
+                        Tag="Floor"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="Sqrt"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="sqrt"
+                        Tag="Sqrt"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="GetRandMax"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="getrandmax"
+                        Tag="GetRandMax"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="Fmod"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="fmod"
+                        Tag="Fmod"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="Hypot"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="hypot"
+                        Tag="Hypot"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="LogTen"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="log10"
+                        Tag="LogTen"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="If"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="if"
+                        Tag="If"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="Else"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="else"
+                        Tag="Else"
+                        Click="PHPCodeNavigation_Click" />
+                <Button x:Name="ElseIf"
+                        Style="{StaticResource ProgramListButtons}"
+                        Content="elseif"
+                        Tag="ElseIf"
+                        Click="PHPCodeNavigation_Click" />
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

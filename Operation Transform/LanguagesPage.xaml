@@ -43,11 +43,11 @@
                         Style="{StaticResource LanguagesPageButton}"
                         Content="C# Programs"
                         Click="CSharpProgramsList_Click" />
-            <!--<Button x:Name="JavaProgramsList"
+            <Button x:Name="JavaProgramsList"
                         Style="{StaticResource LanguagesPageButton}"
                         Content="Java Programs"
                         Click="JavaProgramsList_Click" />
-            <Button x:Name="RecursionList"
+            <!--<Button x:Name="RecursionList"
                         Style="{StaticResource LanguagesPageButton}"
                         Content="Recursion"
                         Click="RecursionList_Click" />
@@ -63,7 +63,7 @@
                         Style="{StaticResource LanguagesPageButton}"
                         Content="JavaScript"
                         Click="JavaScriptList_Click" />
-            <!--<Button x:Name="jQueryList"
+            <Button x:Name="jQueryList"
                         Style="{StaticResource LanguagesPageButton}"
                         Content="jQuery"
                         Click="jQueryList_Click" />
@@ -71,7 +71,7 @@
                         Style="{StaticResource LanguagesPageButton}"
                         Content="PHP Scripts"
                         Click="PHPScriptsList_Click" />
-            <Button x:Name="OtherAppsList"
+            <!--<Button x:Name="OtherAppsList"
                         Style="{StaticResource LanguagesPageButton}"
                         Content="Other Apps"
                         Click="OtherAppsList_Click" />-->
