@@ -1,0 +1,754 @@
+﻿<Page
+    x:Class="Operation_Transform.CPrograms.SortingArrayUsing2Stacks"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.CPrograms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
+                <Run Text="Sorting Array"/>
+                <Run Text=" (Using 2 Stacks)" FontSize="24"/>
+            </TextBlock>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="SortingArrayUsing2Stacks.c" />
+                    </TextBlock>
+                <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="Blue">
+                    		<Run Text="#include"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&lt;stdio.h&gt;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Blue">
+                    		<Run Text="#include"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&lt;stdlib.h&gt;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" top;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *array;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="};"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Blue">
+                    		<Run Text="void"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" push("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *"/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", "/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="number"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=") {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="-&gt;array[++"/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="-&gt;top] = "/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="number"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" pop("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *"/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=") {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="return"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="-&gt;array["/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="-&gt;top--];"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" isStackEmpty("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *"/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=") {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="return"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" ("/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="-&gt;top == -1 || !"/>
+                    	</Span>
+                    	<Span Foreground="Gray">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" main() {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Sorting an Array using 2 Stacks. \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" n, i;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Enter the Size of Data to be sorted. \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;scanf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;%d&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", &amp;n);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *array;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="if"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" ((array = ("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *)calloc(n, "/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="sizeof"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="))) == "/>
+                    	</Span>
+                    	<Span Foreground="#FF6F008A">
+                    		<Run Text="NULL"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=") {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Memory not available. \nExiting! \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;exit(1);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Input Data : \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="for"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (i = 0; i &lt; n; i++) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;scanf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;%d&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", array + i);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *stack1, *stack2;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;stack1 = ("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *)malloc("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="sizeof"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;stack1-&gt;top = -1;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;stack1-&gt;array = ("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *)calloc(n, "/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="sizeof"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;stack2 = ("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *)malloc("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="sizeof"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="stack"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;stack2-&gt;top = -1;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;stack2-&gt;array = ("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" *)calloc(n, "/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="sizeof"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="("/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;push(stack1, *array);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="for"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (i = 1; i &lt; n; i++) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="if"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (stack1-&gt;array[stack1-&gt;top] &gt;= *(array + i)) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;push(stack1, *(array + i));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="else"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="while"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" ((stack1-&gt;array[stack1-&gt;top] &lt; *(array + i)) &amp;&amp; !isStackEmpty(stack1)) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;&#x9;push(stack2, pop(stack1));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;push(stack1, *(array + i));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="while"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (!isStackEmpty(stack2)) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;&#x9;push(stack1, pop(stack2));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Sorted Output : \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="for"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (i = 0; i &lt; n; i++) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;*(array + i) = pop(stack1);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;%d \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", *(array + i));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="return"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" 0;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="}"/>
+                    	</Span>
+                </TextBlock>
+            </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

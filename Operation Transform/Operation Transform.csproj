@@ -124,8 +124,20 @@
     <Compile Include="CPrograms\Comments.xaml.cs">
       <DependentUpon>Comments.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\cpCommandSimulation.xaml.cs">
+      <DependentUpon>cpCommandSimulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\execProcessSystemCall.xaml.cs">
+      <DependentUpon>execProcessSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\forkProcessSystemCall.xaml.cs">
+      <DependentUpon>forkProcessSystemCall.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\GeometricProgression.xaml.cs">
       <DependentUpon>GeometricProgression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\grepCommandSimulation.xaml.cs">
+      <DependentUpon>grepCommandSimulation.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\HelloWorld.xaml.cs">
       <DependentUpon>HelloWorld.xaml</DependentUpon>
@@ -142,11 +154,44 @@
     <Compile Include="CPrograms\LeapYear.xaml.cs">
       <DependentUpon>LeapYear.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\lsCommandSimulation.xaml.cs">
+      <DependentUpon>lsCommandSimulation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\NumberReversal.xaml.cs">
       <DependentUpon>NumberReversal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\openFileSystemCall.xaml.cs">
+      <DependentUpon>openFileSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\QueueUsing2Stacks.xaml.cs">
+      <DependentUpon>QueueUsing2Stacks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\readdirProcessSystemCall.xaml.cs">
+      <DependentUpon>readdirProcessSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\readFileSystemCall.xaml.cs">
+      <DependentUpon>readFileSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\rmCommandSimulation.xaml.cs">
+      <DependentUpon>rmCommandSimulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\SortingArrayUsing2Stacks.xaml.cs">
+      <DependentUpon>SortingArrayUsing2Stacks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\StackUsingLinkedList.xaml.cs">
+      <DependentUpon>StackUsingLinkedList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\statProcessSystemCall.xaml.cs">
+      <DependentUpon>statProcessSystemCall.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\SwapUsingTemporaryVariable.xaml.cs">
       <DependentUpon>SwapUsingTemporaryVariable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\waitProcessSystemCall.xaml.cs">
+      <DependentUpon>waitProcessSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\writeFileSystemCall.xaml.cs">
+      <DependentUpon>writeFileSystemCall.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSharpPrograms\ArithmeticProgression.xaml.cs">
       <DependentUpon>ArithmeticProgression.xaml</DependentUpon>
@@ -518,7 +563,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CPrograms\cpCommandSimulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\execProcessSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\forkProcessSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CPrograms\GeometricProgression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\grepCommandSimulation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -542,11 +603,55 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CPrograms\lsCommandSimulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CPrograms\NumberReversal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CPrograms\openFileSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\QueueUsing2Stacks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\readdirProcessSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\readFileSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\rmCommandSimulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\SortingArrayUsing2Stacks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\StackUsingLinkedList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\statProcessSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CPrograms\SwapUsingTemporaryVariable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\waitProcessSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\writeFileSystemCall.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
