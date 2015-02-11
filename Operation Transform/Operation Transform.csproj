@@ -151,14 +151,56 @@
     <Compile Include="CSharpPrograms\ArithmeticProgression.xaml.cs">
       <DependentUpon>ArithmeticProgression.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CSharpPrograms\ArrayAsObjects.xaml.cs">
+      <DependentUpon>ArrayAsObjects.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\ArrayDeclaration.xaml.cs">
+      <DependentUpon>ArrayDeclaration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\ArrayInitialization.xaml.cs">
+      <DependentUpon>ArrayInitialization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\ArrayInstantiation.xaml.cs">
+      <DependentUpon>ArrayInstantiation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\Bool.xaml.cs">
+      <DependentUpon>Bool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\Char.xaml.cs">
+      <DependentUpon>Char.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\Class.xaml.cs">
+      <DependentUpon>Class.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CSharpPrograms\Comments.xaml.cs">
       <DependentUpon>Comments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\Delegate.xaml.cs">
+      <DependentUpon>Delegate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\DoWhileLoop.xaml.cs">
+      <DependentUpon>DoWhileLoop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\ForeachAndArrays.xaml.cs">
+      <DependentUpon>ForeachAndArrays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\ForeachLoop.xaml.cs">
+      <DependentUpon>ForeachLoop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\ForLoop.xaml.cs">
+      <DependentUpon>ForLoop.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSharpPrograms\GeometricProgression.xaml.cs">
       <DependentUpon>GeometricProgression.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSharpPrograms\HelloWorld.xaml.cs">
       <DependentUpon>HelloWorld.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\IfElse.xaml.cs">
+      <DependentUpon>IfElse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\ImplicitlyTypedArrays.xaml.cs">
+      <DependentUpon>ImplicitlyTypedArrays.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSharpPrograms\isEven.xaml.cs">
       <DependentUpon>isEven.xaml</DependentUpon>
@@ -172,8 +214,23 @@
     <Compile Include="CSharpPrograms\LeapYear.xaml.cs">
       <DependentUpon>LeapYear.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CSharpPrograms\MethodAccess.xaml.cs">
+      <DependentUpon>MethodAccess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\MethodParametersAndArguements.xaml.cs">
+      <DependentUpon>MethodParametersAndArguements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\MethodReturningValues.xaml.cs">
+      <DependentUpon>MethodReturningValues.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\MethodSignatures.xaml.cs">
+      <DependentUpon>MethodSignatures.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CSharpPrograms\NumberReversal.xaml.cs">
       <DependentUpon>NumberReversal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\PassingByValue.xaml.cs">
+      <DependentUpon>PassingByValue.xaml</DependentUpon>
     </Compile>
     <Compile Include="CSharpPrograms\SimpleInterestAndAmount.xaml.cs">
       <DependentUpon>SimpleInterestAndAmount.xaml</DependentUpon>
@@ -186,6 +243,12 @@
     </Compile>
     <Compile Include="CSharpPrograms\SumInfiniteGeometricProgression.xaml.cs">
       <DependentUpon>SumInfiniteGeometricProgression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\SwitchCase.xaml.cs">
+      <DependentUpon>SwitchCase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CSharpPrograms\WhileLoop.xaml.cs">
+      <DependentUpon>WhileLoop.xaml</DependentUpon>
     </Compile>
     <Compile Include="JavaPrograms\ArithmeticProgression.xaml.cs">
       <DependentUpon>ArithmeticProgression.xaml</DependentUpon>
@@ -491,7 +554,55 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CSharpPrograms\ArrayAsObjects.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\ArrayDeclaration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\ArrayInitialization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\ArrayInstantiation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\Bool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\Char.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\Class.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CSharpPrograms\Comments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\Delegate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\DoWhileLoop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\ForeachAndArrays.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\ForeachLoop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\ForLoop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -500,6 +611,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CSharpPrograms\HelloWorld.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\IfElse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\ImplicitlyTypedArrays.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -519,7 +638,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CSharpPrograms\MethodAccess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\MethodParametersAndArguements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\MethodReturningValues.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\MethodSignatures.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CSharpPrograms\NumberReversal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\PassingByValue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -536,6 +675,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CSharpPrograms\SumInfiniteGeometricProgression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\SwitchCase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CSharpPrograms\WhileLoop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
