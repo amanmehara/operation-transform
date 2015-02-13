@@ -89,6 +89,7 @@
     </Compile>
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Common\RatingHelper.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="CPlusPlusPrograms\ArithmeticProgression.xaml.cs">

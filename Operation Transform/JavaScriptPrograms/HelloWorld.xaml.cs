@@ -35,6 +35,8 @@ namespace Operation_Transform.JavaScriptPrograms
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+
+            RatingHelper.RateAndReview();
         }
 
         /// <summary>

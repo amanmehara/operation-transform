@@ -1,10 +1,17 @@
-﻿using System;
+﻿using Operation_Transform.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Xml;
+using System.Xml.Linq;
+using Windows.ApplicationModel.Email;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Security.ExchangeActiveSyncProvisioning;
+using Windows.Storage;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,6 +34,8 @@ namespace Operation_Transform
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            RatingHelper.RateAndReview();
         }
 
         /// <summary>

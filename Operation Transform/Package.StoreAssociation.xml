@@ -218,5 +218,11 @@
     <MainPackageIdentityName>33294AmanMehara.179533D96A6D6</MainPackageIdentityName>
     <MainPackageIdentityName>33294AmanMehara.622068DB4A45E</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=fb094952-ce8c-49c5-8c82-8d2854e8bb9d" />
+  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=fb094952-ce8c-49c5-8c82-8d2854e8bb9d">
+    <PackageInfo>
+      <OsMinVersion>6.3.0.0</OsMinVersion>
+      <PackageArchitecture>neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.2.0.1</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>
