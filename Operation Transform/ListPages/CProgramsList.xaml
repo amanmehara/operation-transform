@@ -130,7 +130,7 @@
                     <Button x:Name="CountingSort"
                             Style="{StaticResource ProgramListButtons}"
                             Content="Counting Sort"
-                            Tag="Counting Sort"
+                            Tag="CountingSort"
                             Click="CCodeNavigation_Click" />
                     <Button x:Name="StackUsingLinkedList"
                             Style="{StaticResource ProgramListButtons}"
@@ -212,10 +212,10 @@
                             Content="FCFS (Scheduling)"
                             Tag="FirstComeFirstServeScheduling"
                             Click="CCodeNavigation_Click" />
-                    <Button x:Name="ShortestJobFirstServeScheduling"
+                    <Button x:Name="ShortestJobFirstScheduling"
                             Style="{StaticResource ProgramListButtons}"
                             Content="SJF (Scheduling)"
-                            Tag="ShortestJobFirstServeScheduling"
+                            Tag="ShortestJobFirstScheduling"
                             Click="CCodeNavigation_Click" />
                     <Button x:Name="PriorityScheduling"
                             Style="{StaticResource ProgramListButtons}"

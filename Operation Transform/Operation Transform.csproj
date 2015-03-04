@@ -137,8 +137,8 @@
     <Compile Include="CPrograms\execProcessSystemCall.xaml.cs">
       <DependentUpon>execProcessSystemCall.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CPrograms\FirstComeFirstScheduling.xaml.cs">
-      <DependentUpon>FirstComeFirstScheduling.xaml</DependentUpon>
+    <Compile Include="CPrograms\FirstComeFirstServeScheduling.xaml.cs">
+      <DependentUpon>FirstComeFirstServeScheduling.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\forkProcessSystemCall.xaml.cs">
       <DependentUpon>forkProcessSystemCall.xaml</DependentUpon>
@@ -622,7 +622,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CPrograms\FirstComeFirstScheduling.xaml">
+    <Page Include="CPrograms\FirstComeFirstServeScheduling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
