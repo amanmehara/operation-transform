@@ -122,14 +122,23 @@
     <Compile Include="CPrograms\ArithmeticProgression.xaml.cs">
       <DependentUpon>ArithmeticProgression.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\BubbleSort.xaml.cs">
+      <DependentUpon>BubbleSort.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\Comments.xaml.cs">
       <DependentUpon>Comments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\CountingSort.xaml.cs">
+      <DependentUpon>CountingSort.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\cpCommandSimulation.xaml.cs">
       <DependentUpon>cpCommandSimulation.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\execProcessSystemCall.xaml.cs">
       <DependentUpon>execProcessSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\FirstComeFirstScheduling.xaml.cs">
+      <DependentUpon>FirstComeFirstScheduling.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\forkProcessSystemCall.xaml.cs">
       <DependentUpon>forkProcessSystemCall.xaml</DependentUpon>
@@ -142,6 +151,9 @@
     </Compile>
     <Compile Include="CPrograms\HelloWorld.xaml.cs">
       <DependentUpon>HelloWorld.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\InsertionSort.xaml.cs">
+      <DependentUpon>InsertionSort.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\isEven.xaml.cs">
       <DependentUpon>isEven.xaml</DependentUpon>
@@ -163,6 +175,9 @@
     </Compile>
     <Compile Include="CPrograms\openFileSystemCall.xaml.cs">
       <DependentUpon>openFileSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\PriorityScheduling.xaml.cs">
+      <DependentUpon>PriorityScheduling.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\QueueUsing2Stacks.xaml.cs">
       <DependentUpon>QueueUsing2Stacks.xaml</DependentUpon>
@@ -190,6 +205,18 @@
     </Compile>
     <Compile Include="CPrograms\rmCommandSimulation.xaml.cs">
       <DependentUpon>rmCommandSimulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\RootsOfQuadraticEquation.xaml.cs">
+      <DependentUpon>RootsOfQuadraticEquation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\RoundRobinScheduling.xaml.cs">
+      <DependentUpon>RoundRobinScheduling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\SelectionSort.xaml.cs">
+      <DependentUpon>SelectionSort.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\ShortestJobFirstScheduling.xaml.cs">
+      <DependentUpon>ShortestJobFirstScheduling.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\SortingArrayUsing2Stacks.xaml.cs">
       <DependentUpon>SortingArrayUsing2Stacks.xaml</DependentUpon>
@@ -575,7 +602,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CPrograms\BubbleSort.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CPrograms\Comments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\CountingSort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -584,6 +619,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\execProcessSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\FirstComeFirstScheduling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -600,6 +639,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\HelloWorld.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\InsertionSort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -628,6 +671,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\openFileSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\PriorityScheduling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -664,6 +711,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\rmCommandSimulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\RootsOfQuadraticEquation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\RoundRobinScheduling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\SelectionSort.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\ShortestJobFirstScheduling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

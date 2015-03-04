@@ -1,0 +1,472 @@
+﻿<Page
+    x:Class="Operation_Transform.CPrograms.RootsOfQuadraticEquation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.CPrograms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
+                <Run Text="Quadratic Equation"/>
+                <Run Text=" (Roots)" FontSize="24"/>
+            </TextBlock>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="RootsOfQuadraticEquation.c" />
+                    </TextBlock>
+                <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="Blue">
+                    		<Run Text="#include"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&lt;stdio.h&gt;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Blue">
+                    		<Run Text="#include"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&lt;math.h&gt;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" main() {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Quadratic Equation \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;( ax%c + bx + c = 0 ) \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", 253);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="float"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" a, b, c, alpha, beta, discriminant;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;a = &quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;scanf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;%f&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", &amp;a);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;b = &quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;scanf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;%f&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", &amp;b);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;c = &quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;scanf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;%f&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", &amp;c);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="if"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (!a) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\'a\' must not be 0. \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="else"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;discriminant = pow(b, 2) - 4 * a*c;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Discriminant : %f \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", discriminant);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="if"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (discriminant &gt; 0) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;alpha = (-b + sqrt(discriminant)) / (2 * a);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;beta = (-b - sqrt(discriminant)) / (2 * a);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;The roots are Real and Distinct \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;alpha = %f \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", alpha);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;beta = %f \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", beta);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="else"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" "/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="if"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (!discriminant) {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;alpha = beta = -b / (2 * a);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;The roots are Real and Equal \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;alpha = beta = %f \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", alpha);"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="else"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" {"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Root are Complex (Real + Imaginary) \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;alpha = %f + %f i \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", (-b / (2 * a)), sqrt(fabs(discriminant)) / (2 * a));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;beta = %f - %f i \n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", (-b / (2 * a)), sqrt(fabs(discriminant)) / (2 * a));"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;"/>
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="return"/>
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" 0;"/>
+                    	</Span>
+                    	<LineBreak/>
+                    	<Span Foreground="Black">
+                    		<Run Text="}"/>
+                    	</Span>
+                </TextBlock>
+            </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>
