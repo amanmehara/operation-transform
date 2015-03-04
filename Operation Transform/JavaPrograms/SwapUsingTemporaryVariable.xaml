@@ -1,0 +1,248 @@
+﻿<Page
+    x:Class="Operation_Transform.JavaPrograms.SwapUsingTemporaryVariable"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.JavaPrograms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
+                <Run Text="Swap"/>
+                <Run Text=" (Using Temporary Variable)" FontSize="24"/>
+            </TextBlock>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="Main.java" />
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="Navy">
+                    		<Run Text="package " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="com.amanmehara; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Navy">
+                    		<Run Text="public class " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="Main { " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="public static void " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="main(String[] args) { " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="int " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="firstNumber = " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="48" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="int " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="secondNumber= " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="36" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="int " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="temporary; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" &#x9;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Swap :&quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Before Swapping :&quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;First Number = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ firstNumber); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Second Number = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ secondNumber); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Gray"
+                              FontStyle="Italic">
+                    		<Run Text="//Swapping" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        temporary=firstNumber; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        firstNumber=secondNumber; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        secondNumber=temporary; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;After Swapping :&quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;First Number = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ firstNumber); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Second Number = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ secondNumber); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="    } " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span FontSize="16"
+                              FontFamily="Times New Roman">
+                    		<Run Text="}" />
+                    	</Span>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

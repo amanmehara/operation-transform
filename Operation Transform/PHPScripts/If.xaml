@@ -1,0 +1,299 @@
+﻿<Page
+    x:Class="Operation_Transform.PHPScripts.If"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.PHPScripts"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="if"
+                       Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                               Text="if.php" />
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="&lt;?php" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="//Example 1" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="$first" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="=" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="24" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="$second" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="=" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="16" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="if" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="(" />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="$first" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="$second" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=")" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="{}{" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="echo" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="&quot;" />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="$first" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text=" is bigger than" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="$second" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="&quot;" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="echo" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="&quot;&lt;br /&gt;&quot;" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="//Example 2" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="$number" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="=" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="5" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="if" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="(" />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="$number" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="==" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF9B5F9B">
+                    		<Run Text="5" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="):" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="echo" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="&quot;number equals 5&quot;" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="echo" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="&quot;...&quot;" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="endif" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="?&gt;" />
+                    	</Span>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

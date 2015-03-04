@@ -1,0 +1,786 @@
+﻿<Page
+    x:Class="Operation_Transform.jQuery.FadeIn"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.jQuery"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Fade In"
+                       Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="FadeIn.js" />
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="Black">
+                    		<Run Text="$" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="(" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="document" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=")" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".ready" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="(" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="function" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="()" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="{}{" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    $" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="(" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="&quot;#fadeIn&quot;" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=")" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".click" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="(" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="function" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="()" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="{}{" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        $" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="(" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="&quot;#toBeFadedIn&quot;" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text=")" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".fadeIn" />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="();" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="})" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF1E7C70">
+                    		<Run Text="});" />
+                    	</Span>
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="FadeIn.css" />
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="body" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="{}{" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="#toBeFadedIn" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="{}{" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="background-color" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="orange" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="width" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="320px" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="height" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="96px" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="display" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="none" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";    " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="margin-top" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="16px" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="margin-bottom" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="16px" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="#fadeIn" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="{}{" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="color" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="white" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="background-color" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="black" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="font-family" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="'Segoe UI'" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="," />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="sans-serif" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="font-weight" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="lighter" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="font-size" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="xx-large" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="padding" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="4px" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="32px" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="border" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="2px" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="solid" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="black" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="border-radius" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=": " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="8px" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="#fadeIn" />
+                    	</Span>
+                    	<Span Foreground="#FFE29F96">
+                    		<Run Text=":hover" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="{}{" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="background-color" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=":" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="gray" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="}" />
+                    	</Span>
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="FadeIn.html" />
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="!DOCTYPE" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="html" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="html" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="lang" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;en&quot;&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="head" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="meta" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="charset" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;utf-8&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="/&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="title" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="Programming!" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;/" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="title" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="script" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="src" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js&quot;&gt;&lt;/" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="script" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="script" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="  " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="type" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;text/javascript&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="src" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;FadeIn.js&quot;&gt;&lt;/" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="script" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="link" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="rel" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;stylesheet&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="type" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;text/css&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="href" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;FadeIn.css&quot;/&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;/" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="head" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="body" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="div" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="id" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;toBeFadedIn&quot;&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;/" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="div" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="button" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<Span Foreground="#FFCF4820">
+                    		<Run Text="id" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="=&quot;fadeIn&quot;&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            fadeIn!" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;/" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="button" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;/" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="body" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&lt;/" />
+                    	</Span>
+                    	<Span Foreground="#FF823125">
+                    		<Run Text="html" />
+                    	</Span>
+                    	<Span Foreground="#FF4F76AC">
+                    		<Run Text="&gt;" />
+                    	</Span>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

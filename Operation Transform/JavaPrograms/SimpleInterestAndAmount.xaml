@@ -1,0 +1,241 @@
+﻿<Page
+    x:Class="Operation_Transform.JavaPrograms.SimpleInterestAndAmount"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.JavaPrograms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Simple Interest &amp; Amount"
+                       Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="Main.java" />
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="Navy">
+                    		<Run Text="package " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="com.amanmehara; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Navy">
+                    		<Run Text="public class " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="Main { " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="public static void " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="main(String[] args) { " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Simple Interest &amp; Amount :&quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="double " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="principal = " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="10000" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="double " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="rate = " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="8.5" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="double " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="time = " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="4" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Principal : &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ principal); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Rate : &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ rate); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Time : &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ time); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="double " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="SimpleInterest = principal * rate * time / " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="100" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Simple Interest = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ SimpleInterest); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="double " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="amount = principal + SimpleInterest; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Amount = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ amount); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="    } " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span FontSize="16"
+                              FontFamily="Times New Roman">
+                    		<Run Text="}" />
+                    	</Span>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

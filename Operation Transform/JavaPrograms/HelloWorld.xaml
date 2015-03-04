@@ -1,0 +1,92 @@
+﻿<Page
+    x:Class="Operation_Transform.JavaPrograms.HelloWorld"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.JavaPrograms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Hello World"
+                       Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="Main.java" />
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="Navy">
+                    		<Run Text="package " />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="com.amanmehara; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Navy">
+                    		<Run Text="public class " />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="Main { " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="public static void " />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="main(String[] args) { " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Hello World! :)&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    } " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="} " />
+                    	</Span>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

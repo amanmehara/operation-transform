@@ -1,0 +1,88 @@
+﻿<Page
+    x:Class="Operation_Transform.PHPScripts.Comments"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.PHPScripts"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Comments"
+                       Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                               Text="Comments.php" />
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="&lt;?php" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="//Single line comment" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="/*" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="    Multi-line Comment" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="    This is a multi-line comment." />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="    Programming! - Get the Code" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="    */" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="#FF46830D">
+                    		<Run Text="# This is a one-line shell-style comment" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="#FF222222">
+                    		<Run Text="?&gt;" />
+                    	</Span>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

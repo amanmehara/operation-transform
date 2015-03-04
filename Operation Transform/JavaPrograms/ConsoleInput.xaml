@@ -1,0 +1,362 @@
+﻿<Page
+    x:Class="Operation_Transform.JavaPrograms.ConsoleInput"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Operation_Transform.JavaPrograms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Console Input"
+                       Style="{StaticResource ProgramMenuHeader}" 
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                    	<Run Text="Main.java" />
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                    	<Span Foreground="Navy">
+                    		<Run Text="package " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="com.amanmehara; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Navy">
+                    		<Run Text="import " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="java.util.Scanner; " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Navy">
+                    		<Run Text="public class " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="Main { " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="    " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="public static void " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="main(String[] args) { " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        Scanner consoleInput = " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="new " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="Scanner(System.in); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Console Input :&quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Gray"
+                              FontStyle="Italic">
+                    		<Run Text="//Integer Input" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.print(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Enter an integer : &quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="int " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="IntegerFromConsole = consoleInput.nextInt(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Integer entered = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ IntegerFromConsole); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Gray"
+                              FontStyle="Italic">
+                    		<Run Text="//Float Input" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.print(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Enter a floating point number : &quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="float " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="FloatFromConsole = consoleInput.nextFloat(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Floating point number entered = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ FloatFromConsole); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Gray"
+                              FontStyle="Italic">
+                    		<Run Text="//Double Input" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.print(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Enter a double precision number : &quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Navy">
+                    		<Run Text="double " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="DoubleFromConsole = consoleInput.nextDouble(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Double precision number entered = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ DoubleFromConsole); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Gray"
+                              FontStyle="Italic">
+                    		<Run Text="//Word Input" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.print(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Enter a word : &quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        String WordFromConsole = consoleInput.next(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Word entered = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ WordFromConsole); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        consoleInput.nextLine(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        " />
+                    	</Span>
+                    	<Span Foreground="Gray"
+                              FontStyle="Italic">
+                    		<Run Text="//String Input" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text=" " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.print(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;Enter a string : &quot;" />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        String StringFromConsole = consoleInput.nextLine(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(" />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="&quot;String entered = &quot; " />
+                    	</Span>
+                    	<Span>
+                    		<Run Text="+ StringFromConsole); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="        System.out.println(); " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="    } " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span>
+                    		<Run Text="} " />
+                    	</Span>
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</Page>

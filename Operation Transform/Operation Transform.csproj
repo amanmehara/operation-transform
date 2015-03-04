@@ -173,6 +173,21 @@
     <Compile Include="CPrograms\readFileSystemCall.xaml.cs">
       <DependentUpon>readFileSystemCall.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\recursiveBinarySearch.xaml.cs">
+      <DependentUpon>recursiveBinarySearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\recursiveFactorial.xaml.cs">
+      <DependentUpon>recursiveFactorial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\recursiveGreatestCommonDivisor.xaml.cs">
+      <DependentUpon>recursiveGreatestCommonDivisor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\recursiveNthFibonacci.xaml.cs">
+      <DependentUpon>recursiveNthFibonacci.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\recursiveTowerOfHanoi.xaml.cs">
+      <DependentUpon>recursiveTowerOfHanoi.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\rmCommandSimulation.xaml.cs">
       <DependentUpon>rmCommandSimulation.xaml</DependentUpon>
     </Compile>
@@ -625,6 +640,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\readFileSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\recursiveBinarySearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\recursiveFactorial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\recursiveGreatestCommonDivisor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\recursiveNthFibonacci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\recursiveTowerOfHanoi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
