@@ -5,6 +5,7 @@
     xmlns:local="using:Operation_Transform.CPlusPlusPrograms"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -18,8 +19,10 @@
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
@@ -215,5 +218,19 @@
                     </TextBlock>
                 </StackPanel>
             </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
     </Grid>
 </Page>

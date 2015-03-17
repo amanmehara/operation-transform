@@ -1,686 +1,704 @@
-﻿<Page
-    x:Class="Operation_Transform.CPrograms.statProcessSystemCall"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.CPrograms"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.CPrograms.statProcessSystemCall"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
+            <TextBlock Style="{StaticResource ProgramMenuHeader}"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
-                <Run Text="stat"/>
-                <Run Text=" (Process System Call)" FontSize="24"/>
+                <Run Text="stat" />
+                <Run Text=" (Process System Call)"
+                     FontSize="24" />
             </TextBlock>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
                     	<Run Text="stat.c" />
-                    </TextBlock>
+                </TextBlock>
                 <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;stdio.h&gt;"/>
+                    		<Run Text="&lt;stdio.h&gt;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;stdlib.h&gt;"/>
+                    		<Run Text="&lt;stdlib.h&gt;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;sys/stat.h&gt;"/>
+                    		<Run Text="&lt;sys/stat.h&gt;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;time.h&gt;"/>
+                    		<Run Text="&lt;time.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" main("/>
+                    		<Run Text=" main(" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argc"/>
+                    		<Run Text="argc" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="char"/>
+                    		<Run Text="char" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="*"/>
+                    		<Run Text="*" />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argv"/>
+                    		<Run Text="argv" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[]) {"/>
+                    		<Run Text="[]) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="struct"/>
+                    		<Run Text="struct" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="stat"/>
+                    		<Run Text="stat" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" file;"/>
+                    		<Run Text=" file;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" n;"/>
+                    		<Run Text=" n;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" ("/>
+                    		<Run Text=" (" />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argc"/>
+                    		<Run Text="argc" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" != 2) {"/>
+                    		<Run Text=" != 2) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Number of Arguements provided != 2 \n&quot;"/>
+                    		<Run Text="&quot;Number of Arguements provided != 2 \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Arguements Required: \n&quot;"/>
+                    		<Run Text="&quot;Arguements Required: \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Filename \n&quot;"/>
+                    		<Run Text="&quot;Filename \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;exit(-1);"/>
+                    		<Run Text="&#x9;&#x9;exit(-1);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" ((n = stat("/>
-                    	</Span>
-                    	<Span Foreground="Gray">
-                    		<Run Text="argv"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text="[1], &amp;file)) == -1) {"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;perror("/>
+                    		<Run Text=" ((n = stat(" />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argv"/>
+                    		<Run Text="argv" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[1]);"/>
+                    		<Run Text="[1], &amp;file)) == -1) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;exit(-1);"/>
+                    		<Run Text="&#x9;&#x9;perror(" />
                     	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;User ID : %d \n&quot;"/>
+                    	<Span Foreground="Gray">
+                    		<Run Text="argv" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", file.st_uid);"/>
+                    		<Run Text="[1]);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;exit(-1);" />
                     	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Group ID : %d \n&quot;"/>
-                    	</Span>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text=", file.st_gid);"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Block Size : %d\n&quot;"/>
+                    		<Run Text="&quot;User ID : %d \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", file.st_blksize);"/>
+                    		<Run Text=", file.st_uid);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Blocks Allocated : %d\n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=", file.st_blocks);"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;i-Node Number : %d \n&quot;"/>
+                    		<Run Text="&quot;Group ID : %d \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", file.st_ino);"/>
+                    		<Run Text=", file.st_gid);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;Block Size : %d\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=", file.st_blksize);" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Last Accessed : %s&quot;"/>
+                    		<Run Text="&quot;Blocks Allocated : %d\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", ctime(&amp;(file.st_atime)));"/>
+                    		<Run Text=", file.st_blocks);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Last Modified : %s&quot;"/>
+                    		<Run Text="&quot;i-Node Number : %d \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", ctime(&amp;(file.st_mtime)));"/>
+                    		<Run Text=", file.st_ino);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;File Size : %d Bytes \n&quot;"/>
+                    		<Run Text="&quot;Last Accessed : %s&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", file.st_size);"/>
+                    		<Run Text=", ctime(&amp;(file.st_atime)));" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Number Of Links : %d \n&quot;"/>
+                    		<Run Text="&quot;Last Modified : %s&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", file.st_nlink);"/>
+                    		<Run Text=", ctime(&amp;(file.st_mtime)));" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Directory : &quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((S_ISDIR(file.st_mode)) ? "/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;d &quot;"/>
+                    		<Run Text="&quot;File Size : %d Bytes \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=", file.st_size);" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;Number Of Links : %d \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=", file.st_nlink);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;Directory : &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf((S_ISDIR(file.st_mode)) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Permissions : \n&quot;"/>
+                    		<Run Text="&quot;d &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;User : &quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IRUSR) ? "/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;r &quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;Permissions : \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IWUSR) ? "/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;w &quot;"/>
+                    		<Run Text="&quot;User : &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IRUSR) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;r &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IXUSR) ? "/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;x &quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IWUSR) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;w &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IXUSR) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Group : &quot;"/>
+                    		<Run Text="&quot;x &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IRGRP) ? "/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;r &quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IWGRP) ? "/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;w &quot;"/>
+                    		<Run Text="&quot;Group : &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IRGRP) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;r &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IXGRP) ? "/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;x &quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IWGRP) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;w &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IXGRP) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Other : &quot;"/>
+                    		<Run Text="&quot;x &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IROTH) ? "/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;r &quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IWOTH) ? "/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;w &quot;"/>
+                    		<Run Text="&quot;Other : &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IROTH) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;r &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IXOTH) ? "/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;x &quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" : "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IWOTH) ? " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;- &quot;"/>
+                    		<Run Text="&quot;w &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text=" : " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;- &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;printf((file.st_mode &amp; S_IXOTH) ? " />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;x &quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" : " />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;- &quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (file.st_mode &amp; "/>
+                    		<Run Text=" (file.st_mode &amp; " />
                     	</Span>
                     	<Span Foreground="#FF6F008A">
-                    		<Run Text="S_IFREG"/>
+                    		<Run Text="S_IFREG" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=") {"/>
+                    		<Run Text=") {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Type : Regular \n&quot;"/>
+                    		<Run Text="&quot;Type : Regular \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (file.st_mode &amp; "/>
+                    		<Run Text=" (file.st_mode &amp; " />
                     	</Span>
                     	<Span Foreground="#FF6F008A">
-                    		<Run Text="S_IFDIR"/>
+                    		<Run Text="S_IFDIR" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=") {"/>
+                    		<Run Text=") {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Type : Directory \n&quot;"/>
+                    		<Run Text="&quot;Type : Directory \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="return"/>
+                    		<Run Text="return" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" 0;"/>
+                    		<Run Text=" 0;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="}"/>
+                    		<Run Text="}" />
                     	</Span>
                 </TextBlock>
             </StackPanel>
-            </ScrollViewer>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
     </Grid>
 </Page>

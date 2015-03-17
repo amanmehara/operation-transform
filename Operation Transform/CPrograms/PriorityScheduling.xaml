@@ -1,1080 +1,1098 @@
-﻿<Page
-    x:Class="Operation_Transform.CPrograms.PriorityScheduling"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.CPrograms"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.CPrograms.PriorityScheduling"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
+            <TextBlock Style="{StaticResource ProgramMenuHeader}"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
-                <Run Text="Priority"/>
-                <Run Text=" (Scheduling)" FontSize="24"/>
+                <Run Text="Priority" />
+                <Run Text=" (Scheduling)"
+                     FontSize="24" />
             </TextBlock>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
                     	<Run Text="priorityScheduling.c" />
-                    </TextBlock>
+                </TextBlock>
                 <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;stdio.h&gt;"/>
+                    		<Run Text="&lt;stdio.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;stdlib.h&gt;"/>
+                    		<Run Text="&lt;stdlib.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="struct"/>
+                    		<Run Text="struct" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="process"/>
+                    		<Run Text="process" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" {"/>
+                    		<Run Text=" {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" processID;"/>
+                    		<Run Text=" processID;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" priority;"/>
+                    		<Run Text=" priority;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" burstTime;"/>
+                    		<Run Text=" burstTime;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" totalTime;"/>
+                    		<Run Text=" totalTime;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" waitTime;"/>
+                    		<Run Text=" waitTime;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="};"/>
+                    		<Run Text="};" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" main() {"/>
+                    		<Run Text=" main() {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="int"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=" i, j, k, number, totalTurnAroundTime = 0, totalWaitTime = 0;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="float"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" averageTurnAroundTime, averageWaitTime;"/>
+                    		<Run Text=" i, j, k, number, totalTurnAroundTime = 0, totalWaitTime = 0;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="struct"/>
+                    		<Run Text="float" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" averageTurnAroundTime, averageWaitTime;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="struct" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="process"/>
+                    		<Run Text="process" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" temp;"/>
+                    		<Run Text=" temp;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Scheduling \n&quot;"/>
+                    		<Run Text="&quot;Scheduling \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;W-Time : Wait Time \n&quot;"/>
+                    		<Run Text="&quot;W-Time : Wait Time \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;B-Time : Burst Time \n&quot;"/>
+                    		<Run Text="&quot;B-Time : Burst Time \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;T-Time : Total Time \n&quot;"/>
+                    		<Run Text="&quot;T-Time : Total Time \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Number of Processes : &quot;"/>
+                    		<Run Text="&quot;Number of Processes : &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;scanf("/>
+                    		<Run Text="&#x9;scanf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;%d&quot;"/>
+                    		<Run Text="&quot;%d&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", &amp;number);"/>
+                    		<Run Text=", &amp;number);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="struct"/>
+                    		<Run Text="struct" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="process"/>
+                    		<Run Text="process" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" *process = ("/>
+                    		<Run Text=" *process = (" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="struct"/>
+                    		<Run Text="struct" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="process"/>
+                    		<Run Text="process" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" *)calloc(number, "/>
+                    		<Run Text=" *)calloc(number, " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="sizeof"/>
+                    		<Run Text="sizeof" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="("/>
+                    		<Run Text="(" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="struct"/>
+                    		<Run Text="struct" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="process"/>
+                    		<Run Text="process" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="));"/>
+                    		<Run Text="));" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i = 0; i &lt; number; i++) {"/>
+                    		<Run Text=" (i = 0; i &lt; number; i++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Priority of Process P%d (ms) : &quot;"/>
+                    		<Run Text="&quot;Priority of Process P%d (ms) : &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", (i + 1));"/>
+                    		<Run Text=", (i + 1));" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;scanf("/>
+                    		<Run Text="&#x9;&#x9;scanf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;%d&quot;"/>
+                    		<Run Text="&quot;%d&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", &amp;(process[i].priority));"/>
+                    		<Run Text=", &amp;(process[i].priority));" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;B-Time for Process P%d (ms) : &quot;"/>
+                    		<Run Text="&quot;B-Time for Process P%d (ms) : &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", (i + 1));"/>
+                    		<Run Text=", (i + 1));" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;scanf("/>
+                    		<Run Text="&#x9;&#x9;scanf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;%d&quot;"/>
+                    		<Run Text="&quot;%d&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", &amp;(process[i].burstTime));"/>
+                    		<Run Text=", &amp;(process[i].burstTime));" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;process[i].processID = i + 1;"/>
+                    		<Run Text="&#x9;&#x9;process[i].processID = i + 1;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i = 0; i &lt; (number - 1); i++) {"/>
+                    		<Run Text=" (i = 0; i &lt; (number - 1); i++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;"/>
+                    		<Run Text="&#x9;&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (j = i; j &lt; number; j++) {"/>
+                    		<Run Text=" (j = i; j &lt; number; j++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;&#x9;"/>
+                    		<Run Text="&#x9;&#x9;&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" ((process[i].priority &gt; process[j].priority) || (process[i].priority == process[j].priority &amp;&amp; process[i].processID &gt; process[j].processID)) {"/>
+                    		<Run Text=" ((process[i].priority &gt; process[j].priority) || (process[i].priority == process[j].priority &amp;&amp; process[i].processID &gt; process[j].processID)) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;&#x9;&#x9;temp "/>
+                    		<Run Text="&#x9;&#x9;&#x9;&#x9;temp " />
                     	</Span>
                     	<Span Foreground="Teal">
-                    		<Run Text="="/>
+                    		<Run Text="=" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" process[i];"/>
+                    		<Run Text=" process[i];" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;&#x9;&#x9;process[i] "/>
-                    	</Span>
-                    	<Span Foreground="Teal">
-                    		<Run Text="="/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=" process[j];"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;&#x9;&#x9;process[j] "/>
+                    		<Run Text="&#x9;&#x9;&#x9;&#x9;process[i] " />
                     	</Span>
                     	<Span Foreground="Teal">
-                    		<Run Text="="/>
+                    		<Run Text="=" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" temp;"/>
+                    		<Run Text=" process[j];" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;&#x9;}"/>
+                    		<Run Text="&#x9;&#x9;&#x9;&#x9;process[j] " />
                     	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;process[0].waitTime = 0;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;process[0].totalTime = process[0].burstTime;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    	<Span Foreground="Teal">
+                    		<Run Text="=" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i = 1; i &lt; number; i++) {"/>
+                    		<Run Text=" temp;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;process[i].waitTime = process[i - 1].totalTime;"/>
+                    		<Run Text="&#x9;&#x9;&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;process[i].totalTime = process[i].waitTime + process[i].burstTime;"/>
+                    		<Run Text="&#x9;&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;process[0].waitTime = 0;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;process[0].totalTime = process[0].burstTime;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i = 0; i &lt; number; i++) {"/>
+                    		<Run Text=" (i = 1; i &lt; number; i++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;totalWaitTime += process[i].waitTime;"/>
+                    		<Run Text="&#x9;&#x9;process[i].waitTime = process[i - 1].totalTime;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;totalTurnAroundTime += process[i].totalTime;"/>
+                    		<Run Text="&#x9;&#x9;process[i].totalTime = process[i].waitTime + process[i].burstTime;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;averageWaitTime = ("/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="float"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=")totalWaitTime / number;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;averageTurnAroundTime = ("/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="float"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=")totalTurnAroundTime / number;"/>
+                    		<Run Text=" (i = 0; i &lt; number; i++) {" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;totalWaitTime += process[i].waitTime;" />
                     	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
-                    	</Span>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text="&#x9;&#x9;totalTurnAroundTime += process[i].totalTime;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Priority Scheduling \n&quot;"/>
-                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;i = 42;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;averageWaitTime = (" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="while"/>
+                    		<Run Text="float" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i--) {"/>
+                    		<Run Text=")totalWaitTime / number;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;-&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Process\t W-Time\t B-Time\t T-Time\t Priority \n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;i = 42;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;averageTurnAroundTime = (" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="while"/>
+                    		<Run Text="float" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i--) {"/>
+                    		<Run Text=")totalTurnAroundTime / number;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;-&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;Priority Scheduling \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;i = 42;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="while" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i = 0; i &lt; number; i++) {"/>
+                    		<Run Text=" (i--) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;%4s%d\t %6d\t %6d\t %6d\t %8d \n&quot;"/>
+                    		<Run Text="&quot;-&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;P&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", process[i].processID, process[i].waitTime, process[i].burstTime, process[i].totalTime, process[i].priority);"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;i = 42;"/>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Process\t W-Time\t B-Time\t T-Time\t Priority \n&quot;" />
                     	</Span>
-                    	<LineBreak/>
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;i = 42;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="while"/>
+                    		<Run Text="while" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i--) {"/>
+                    		<Run Text=" (i--) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;-&quot;"/>
+                    		<Run Text="&quot;-&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Gantt Chart \n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;i = totalTurnAroundTime - totalWaitTime + number * 2 + 1;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="while"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i--) {"/>
+                    		<Run Text=" (i = 0; i &lt; number; i++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;-&quot;"/>
+                    		<Run Text="&quot;%4s%d\t %6d\t %6d\t %6d\t %8d \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;P&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=", process[i].processID, process[i].waitTime, process[i].burstTime, process[i].totalTime, process[i].priority);" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;|&quot;"/>
-                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text="&#x9;i = 42;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="while" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i = 0; i &lt; number; i++) {"/>
+                    		<Run Text=" (i--) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;k = process[i].burstTime / 2;"/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
-                    	<LineBreak/>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;-&quot;" />
+                    	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;"/>
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Gantt Chart \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;i = totalTurnAroundTime - totalWaitTime + number * 2 + 1;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="while" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (j = 0; j &lt; k; j++) {"/>
+                    		<Run Text=" (i--) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot; &quot;"/>
+                    		<Run Text="&quot;-&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;P%d&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", process[i].processID);"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;"/>
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;|&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (j = k + 1; j &lt; process[i].burstTime; j++) {"/>
+                    		<Run Text=" (i = 0; i &lt; number; i++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;k = process[i].burstTime / 2;" />
                     	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot; &quot;"/>
-                    	</Span>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;|&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;i = totalTurnAroundTime - totalWaitTime + number * 2 + 1;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="while"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i--) {"/>
+                    		<Run Text=" (j = 0; j &lt; k; j++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;-&quot;"/>
+                    		<Run Text="&quot; &quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;P%d&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=", process[i].processID);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;%d&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=", 0);"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (i = 0; i &lt; number; i++) {"/>
+                    		<Run Text=" (j = k + 1; j &lt; process[i].burstTime; j++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;"/>
+                    		<Run Text="&#x9;&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot; &quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;|&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;i = totalTurnAroundTime - totalWaitTime + number * 2 + 1;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="for"/>
+                    		<Run Text="while" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (j = 0; j &lt; process[i].burstTime; j++) {"/>
+                    		<Run Text=" (i--) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot; &quot;"/>
+                    		<Run Text="&quot;-&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;%2d&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", process[i].totalTime);"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;%d&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=", 0);" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Average Wait Time : %.2f ms \n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=", averageWaitTime);"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Average TurnAround Time : %.2f ms \n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=", averageTurnAroundTime);"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="return"/>
+                    		<Run Text="for" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" 0;"/>
+                    		<Run Text=" (i = 0; i &lt; number; i++) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="}"/>
+                    		<Run Text="&#x9;&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="for" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" (j = 0; j &lt; process[i].burstTime; j++) {" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot; &quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;%2d&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", process[i].totalTime);" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Average Wait Time : %.2f ms \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", averageWaitTime);" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Average TurnAround Time : %.2f ms \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", averageTurnAroundTime);" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;\n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="return" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" 0;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="}" />
                     	</Span>
                 </TextBlock>
             </StackPanel>
-            </ScrollViewer>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
     </Grid>
 </Page>

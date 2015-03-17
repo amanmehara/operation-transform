@@ -1,470 +1,487 @@
-﻿<Page
-    x:Class="Operation_Transform.CSharpPrograms.ImplicitlyTypedArrays"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.CSharpPrograms"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.CSharpPrograms.ImplicitlyTypedArrays"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CSharpPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
             <TextBlock Text="Implicitly Typed Arrays"
-                       Style="{StaticResource ProgramMenuHeader}" 
-                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                       Style="{StaticResource ProgramMenuHeader}"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
-                               Text="Program.cs"/>
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                           Text="Program.cs" />
                 <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System;"/>
+                    		<Run Text=" System;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Collections.Generic;"/>
+                    		<Run Text=" System.Collections.Generic;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Linq;"/>
+                    		<Run Text=" System.Linq;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Text;"/>
+                    		<Run Text=" System.Text;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Threading.Tasks;"/>
+                    		<Run Text=" System.Threading.Tasks;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="namespace"/>
+                    		<Run Text="namespace" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" ImplicitlyTypedArrays"/>
+                    		<Run Text=" ImplicitlyTypedArrays" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="{}{"/>
+                    		<Run Text="{}{" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    "/>
+                    		<Run Text="    " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="class"/>
+                    		<Run Text="class" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Program"/>
+                    		<Run Text="Program" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    {"/>
+                    		<Run Text="    {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        "/>
+                    		<Run Text="        " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="static"/>
+                    		<Run Text="static" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="void"/>
+                    		<Run Text="void" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" Main("/>
+                    		<Run Text=" Main(" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="string"/>
+                    		<Run Text="string" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[] args)"/>
+                    		<Run Text="[] args)" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        {"/>
+                    		<Run Text="        {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="var"/>
+                    		<Run Text="var" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" a = "/>
+                    		<Run Text=" a = " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[] { 1, 10, 100, 1000 }; "/>
+                    		<Run Text="[] { 1, 10, 100, 1000 }; " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// int[] "/>
+                    		<Run Text="// int[] " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="var"/>
+                    		<Run Text="var" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" b = "/>
+                    		<Run Text=" b = " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[] { "/>
+                    		<Run Text="[] { " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;hello&quot;"/>
+                    		<Run Text="&quot;hello&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="null"/>
+                    		<Run Text="null" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;world&quot;"/>
+                    		<Run Text="&quot;world&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" }; "/>
+                    		<Run Text=" }; " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// string[] "/>
+                    		<Run Text="// string[] " />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// single-dimension jagged array "/>
+                    		<Run Text="// single-dimension jagged array " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="var"/>
+                    		<Run Text="var" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" c = "/>
+                    		<Run Text=" c = " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[]   "/>
+                    		<Run Text="[]   " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            {  "/>
+                    		<Run Text="            {  " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[]{1,2,3,4},"/>
+                    		<Run Text="[]{1,2,3,4}," />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[]{5,6,7,8}"/>
+                    		<Run Text="[]{5,6,7,8}" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            };"/>
+                    		<Run Text="            };" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// jagged array of strings "/>
+                    		<Run Text="// jagged array of strings " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="var"/>
+                    		<Run Text="var" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" d = "/>
+                    		<Run Text=" d = " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[]   "/>
+                    		<Run Text="[]   " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            {"/>
+                    		<Run Text="            {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[]{"/>
+                    		<Run Text="[]{" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Luca&quot;"/>
+                    		<Run Text="&quot;Luca&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Mads&quot;"/>
+                    		<Run Text="&quot;Mads&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Luke&quot;"/>
+                    		<Run Text="&quot;Luke&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Dinesh&quot;"/>
+                    		<Run Text="&quot;Dinesh&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="},"/>
+                    		<Run Text="}," />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[]{"/>
+                    		<Run Text="[]{" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Karen&quot;"/>
+                    		<Run Text="&quot;Karen&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Suma&quot;"/>
+                    		<Run Text="&quot;Suma&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Frances&quot;"/>
+                    		<Run Text="&quot;Frances&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="}"/>
+                    		<Run Text="}" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            };"/>
+                    		<Run Text="            };" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//Object Initializers"/>
+                    		<Run Text="//Object Initializers" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//var keyword not used inside object initializers"/>
+                    		<Run Text="//var keyword not used inside object initializers" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="var"/>
+                    		<Run Text="var" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" contacts = "/>
+                    		<Run Text=" contacts = " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[] "/>
+                    		<Run Text="[] " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            {"/>
+                    		<Run Text="            {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" {"/>
+                    		<Run Text=" {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                        Name = "/>
+                    		<Run Text="                        Name = " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Eugene Zabokritski&quot;"/>
+                    		<Run Text="&quot;Eugene Zabokritski&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=","/>
+                    		<Run Text="," />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                        PhoneNumbers = "/>
+                    		<Run Text="                        PhoneNumbers = " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[] { "/>
+                    		<Run Text="[] { " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;206-555-0108&quot;"/>
+                    		<Run Text="&quot;206-555-0108&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;425-555-0001&quot;"/>
+                    		<Run Text="&quot;425-555-0001&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" }"/>
+                    		<Run Text=" }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    },"/>
+                    		<Run Text="                    }," />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" {"/>
+                    		<Run Text=" {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                        Name = "/>
+                    		<Run Text="                        Name = " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Hanying Feng&quot;"/>
+                    		<Run Text="&quot;Hanying Feng&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=","/>
+                    		<Run Text="," />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                        PhoneNumbers = "/>
+                    		<Run Text="                        PhoneNumbers = " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="new"/>
+                    		<Run Text="new" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[] { "/>
+                    		<Run Text="[] { " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;650-555-0199&quot;"/>
+                    		<Run Text="&quot;650-555-0199&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" }"/>
+                    		<Run Text=" }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    }"/>
+                    		<Run Text="                    }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            };"/>
+                    		<Run Text="            };" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        }"/>
+                    		<Run Text="        }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    }"/>
+                    		<Run Text="    }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="}"/>
+                    		<Run Text="}" />
                     	</Span>
                 </TextBlock>
             </StackPanel>
-            </ScrollViewer>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+        
     </Grid>
 </Page>

@@ -1,523 +1,541 @@
-﻿<Page
-    x:Class="Operation_Transform.CPrograms.recursiveBinarySearch"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.CPrograms"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.CPrograms.recursiveBinarySearch"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
+            <TextBlock Style="{StaticResource ProgramMenuHeader}"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
-                <Run Text="Binary Search"/>
-                <Run Text=" (Recursion)" FontSize="24"/>
+                <Run Text="Binary Search" />
+                <Run Text=" (Recursion)"
+                     FontSize="24" />
             </TextBlock>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
-                               Text="recursiveBinarySearch.c" />
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                           Text="recursiveBinarySearch.c" />
                 <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                 	<Span Foreground="Blue">
-                		<Run Text="#include"/>
+                		<Run Text="#include" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" "/>
-                	</Span>
-                	<Span Foreground="#FFA31515">
-                		<Run Text="&lt;stdio.h&gt;"/>
-                	</Span>
-                	<LineBreak/>
-                	<LineBreak/>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" RecursiveBinarySearch("/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" data[], "/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" low, "/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" high, "/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" key);"/>
-                	</Span>
-                	<LineBreak/>
-                	<LineBreak/>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" main() {"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" key, index;"/>
-                	</Span>
-                	<LineBreak/>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;printf("/>
+                		<Run Text=" " />
                 	</Span>
                 	<Span Foreground="#FFA31515">
-                		<Run Text="&quot;Binary Search : \n&quot;"/>
+                		<Run Text="&lt;stdio.h&gt;" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=");"/>
+                		<Run Text=" RecursiveBinarySearch(" />
                 	</Span>
-                	<LineBreak/>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;printf("/>
+                		<Run Text=" data[], " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" low, " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" high, " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" key);" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" main() {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" key, index;" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
                 	</Span>
                 	<Span Foreground="#FFA31515">
-                		<Run Text="&quot;\n&quot;"/>
+                		<Run Text="&quot;Binary Search : \n&quot;" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=");"/>
+                		<Run Text=");" />
                 	</Span>
-                	<LineBreak/>
-                	<LineBreak/>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" data[] = { 1, 2, 4, 5, 7, 9, 12, 15, 16, 17, 20, 24, 27, 28, 36, 38, 44, 45, 48, 50, 51, 52, 54, 56, 60, 64, 72, 75, 77, 79, 80, 81, 89, 94, 98, 100, 104, 116, 124, 156, 157, 164, 182, 200 };"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;printf("/>
+                		<Run Text="&#x9;printf(" />
                 	</Span>
                 	<Span Foreground="#FFA31515">
-                		<Run Text="&quot;Element to be searched = &quot;"/>
+                		<Run Text="&quot;\n&quot;" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=");"/>
+                		<Run Text=");" />
                 	</Span>
-                	<LineBreak/>
+                	<LineBreak />
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;scanf("/>
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" data[] = { 1, 2, 4, 5, 7, 9, 12, 15, 16, 17, 20, 24, 27, 28, 36, 38, 44, 45, 48, 50, 51, 52, 54, 56, 60, 64, 72, 75, 77, 79, 80, 81, 89, 94, 98, 100, 104, 116, 124, 156, 157, 164, 182, 200 };" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
                 	</Span>
                 	<Span Foreground="#FFA31515">
-                		<Run Text="&quot;%d&quot;"/>
+                		<Run Text="&quot;Element to be searched = &quot;" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=",&amp;key);"/>
+                		<Run Text=");" />
                 	</Span>
-                	<LineBreak/>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;printf("/>
-                	</Span>
-                	<Span Foreground="#FFA31515">
-                		<Run Text="&quot;\n&quot;"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=");"/>
-                	</Span>
-                	<LineBreak/>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;index = RecursiveBinarySearch(data, 0, "/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="sizeof"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text="(data) / "/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="sizeof"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text="(*data), key);"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="if"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" (index == -1) {"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;printf("/>
+                		<Run Text="&#x9;scanf(" />
                 	</Span>
                 	<Span Foreground="#FFA31515">
-                		<Run Text="&quot;Key not found! \n&quot;"/>
+                		<Run Text="&quot;%d&quot;" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=");"/>
+                		<Run Text=",&amp;key);" />
                 	</Span>
-                	<LineBreak/>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;}"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="else"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" {"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;printf("/>
+                		<Run Text="&#x9;printf(" />
                 	</Span>
                 	<Span Foreground="#FFA31515">
-                		<Run Text="&quot;Key found at index : %d \n&quot;"/>
+                		<Run Text="&quot;\n&quot;" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=", index);"/>
+                		<Run Text=");" />
                 	</Span>
-                	<LineBreak/>
+                	<LineBreak />
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;}"/>
+                		<Run Text="&#x9;index = RecursiveBinarySearch(data, 0, " />
                 	</Span>
-                	<LineBreak/>
+                	<Span Foreground="Blue">
+                		<Run Text="sizeof" />
+                	</Span>
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;printf("/>
+                		<Run Text="(data) / " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="sizeof" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text="(*data), key);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="if" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" (index == -1) {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;printf(" />
                 	</Span>
                 	<Span Foreground="#FFA31515">
-                		<Run Text="&quot;\n&quot;"/>
+                		<Run Text="&quot;Key not found! \n&quot;" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=");"/>
+                		<Run Text=");" />
                 	</Span>
-                	<LineBreak/>
-                	<LineBreak/>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
+                		<Run Text="&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="return"/>
+                		<Run Text="else" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" 0;"/>
+                		<Run Text=" {" />
                 	</Span>
-                	<LineBreak/>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="}"/>
+                		<Run Text="&#x9;&#x9;printf(" />
                 	</Span>
-                	<LineBreak/>
-                	<LineBreak/>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Key found at index : %d \n&quot;" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" RecursiveBinarySearch("/>
+                		<Run Text=", index);" />
                 	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" "/>
+                		<Run Text=");" />
                 	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="data"/>
-                	</Span>
+                	<LineBreak />
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="[], "/>
-                	</Span>
-                	<Span Foreground="Blue">
-                		<Run Text="int"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" "/>
-                	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="low"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=", "/>
+                		<Run Text="&#x9;" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="int"/>
+                		<Run Text="return" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" "/>
+                		<Run Text=" 0;" />
                 	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="high"/>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="}" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=", "/>
+                		<Run Text=" RecursiveBinarySearch(" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="int"/>
+                		<Run Text="int" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" "/>
+                		<Run Text=" " />
                 	</Span>
                 	<Span Foreground="Gray">
-                		<Run Text="key"/>
+                		<Run Text="data" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=") {"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
+                		<Run Text="[], " />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="int"/>
+                		<Run Text="int" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" mid;"/>
+                		<Run Text=" " />
                 	</Span>
-                	<LineBreak/>
+                	<Span Foreground="Gray">
+                		<Run Text="low" />
+                	</Span>
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
+                		<Run Text=", " />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="if"/>
+                		<Run Text="int" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" ("/>
+                		<Run Text=" " />
                 	</Span>
                 	<Span Foreground="Gray">
-                		<Run Text="low"/>
+                		<Run Text="high" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" &lt;= "/>
-                	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="high"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=") {"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;mid = ("/>
-                	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="low"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=" + "/>
-                	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="high"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=") / 2;"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;"/>
+                		<Run Text=", " />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="if"/>
+                		<Run Text="int" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" ("/>
+                		<Run Text=" " />
                 	</Span>
                 	<Span Foreground="Gray">
-                		<Run Text="data"/>
+                		<Run Text="key" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text="[mid] == "/>
+                		<Run Text=") {" />
                 	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="key"/>
-                	</Span>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text=") {"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;&#x9;"/>
+                		<Run Text="&#x9;" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="return"/>
+                		<Run Text="int" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" mid;"/>
+                		<Run Text=" mid;" />
                 	</Span>
-                	<LineBreak/>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;}"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;"/>
+                		<Run Text="&#x9;" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="else"/>
+                		<Run Text="if" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" "/>
+                		<Run Text=" (" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="low" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" &lt;= " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="high" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=") {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;mid = (" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="low" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="high" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=") / 2;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="if"/>
+                		<Run Text="if" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" ("/>
+                		<Run Text=" (" />
                 	</Span>
                 	<Span Foreground="Gray">
-                		<Run Text="data"/>
+                		<Run Text="data" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text="[mid] &gt; "/>
+                		<Run Text="[mid] == " />
                 	</Span>
                 	<Span Foreground="Gray">
-                		<Run Text="key"/>
+                		<Run Text="key" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=") {"/>
+                		<Run Text=") {" />
                 	</Span>
-                	<LineBreak/>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;&#x9;"/>
+                		<Run Text="&#x9;&#x9;&#x9;" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="return"/>
+                		<Run Text="return" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" RecursiveBinarySearch("/>
+                		<Run Text=" mid;" />
                 	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="data"/>
-                	</Span>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text=", "/>
+                		<Run Text="&#x9;&#x9;}" />
                 	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="low"/>
-                	</Span>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text=", (mid - 1), "/>
-                	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="key"/>
-                	</Span>
-                	<Span Foreground="Black">
-                		<Run Text=");"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;}"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;"/>
+                		<Run Text="&#x9;&#x9;" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="else"/>
+                		<Run Text="else" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" {"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;&#x9;"/>
+                		<Run Text=" " />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="return"/>
+                		<Run Text="if" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" RecursiveBinarySearch("/>
+                		<Run Text=" (" />
                 	</Span>
                 	<Span Foreground="Gray">
-                		<Run Text="data"/>
+                		<Run Text="data" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=", (mid + 1), "/>
+                		<Run Text="[mid] &gt; " />
                 	</Span>
                 	<Span Foreground="Gray">
-                		<Run Text="high"/>
+                		<Run Text="key" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=", "/>
+                		<Run Text=") {" />
                 	</Span>
-                	<Span Foreground="Gray">
-                		<Run Text="key"/>
-                	</Span>
+                	<LineBreak />
                 	<Span Foreground="Black">
-                		<Run Text=");"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;&#x9;}"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;}"/>
-                	</Span>
-                	<LineBreak/>
-                	<Span Foreground="Black">
-                		<Run Text="&#x9;"/>
+                		<Run Text="&#x9;&#x9;&#x9;" />
                 	</Span>
                 	<Span Foreground="Blue">
-                		<Run Text="return"/>
+                		<Run Text="return" />
                 	</Span>
                 	<Span Foreground="Black">
-                		<Run Text=" -1;"/>
+                		<Run Text=" RecursiveBinarySearch(" />
                 	</Span>
-                	<LineBreak/>
+                	<Span Foreground="Gray">
+                		<Run Text="data" />
+                	</Span>
                 	<Span Foreground="Black">
-                		<Run Text="}"/>
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="low" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", (mid - 1), " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="key" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="else" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="return" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" RecursiveBinarySearch(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="data" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", (mid + 1), " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="high" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="key" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="return" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" -1;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="}" />
                 	</Span>
                 </TextBlock>
             </StackPanel>
-            </ScrollViewer>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
     </Grid>
 </Page>

@@ -1,811 +1,829 @@
-﻿<Page
-    x:Class="Operation_Transform.CSharpPrograms.SwitchCase"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.CSharpPrograms"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.CSharpPrograms.SwitchCase"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CSharpPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
             <TextBlock Text="Switch Case"
-                       Style="{StaticResource ProgramMenuHeader}" 
-                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                       Style="{StaticResource ProgramMenuHeader}"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
-                               Text="Program.cs"/>
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                           Text="Program.cs" />
                 <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System;"/>
+                    		<Run Text=" System;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Collections.Generic;"/>
+                    		<Run Text=" System.Collections.Generic;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Linq;"/>
+                    		<Run Text=" System.Linq;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Text;"/>
+                    		<Run Text=" System.Text;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Threading.Tasks;"/>
+                    		<Run Text=" System.Threading.Tasks;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="namespace"/>
+                    		<Run Text="namespace" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" SwitchCase"/>
+                    		<Run Text=" SwitchCase" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="{}{"/>
+                    		<Run Text="{}{" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    "/>
+                    		<Run Text="    " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="class"/>
+                    		<Run Text="class" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Program"/>
+                    		<Run Text="Program" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    {"/>
+                    		<Run Text="    {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        "/>
+                    		<Run Text="        " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="static"/>
+                    		<Run Text="static" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="void"/>
+                    		<Run Text="void" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" Main("/>
+                    		<Run Text=" Main(" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="string"/>
+                    		<Run Text="string" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[] args)"/>
+                    		<Run Text="[] args)" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        {"/>
+                    		<Run Text="        {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//Example 1"/>
+                    		<Run Text="//Example 1" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
+                    		<Run Text="Console" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
+                    		<Run Text=".WriteLine(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Example 1:&quot;"/>
+                    		<Run Text="&quot;Example 1:&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" switchExpression = 3;"/>
+                    		<Run Text=" switchExpression = 3;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="switch"/>
+                    		<Run Text="switch" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (switchExpression)"/>
+                    		<Run Text=" (switchExpression)" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            {"/>
+                    		<Run Text="            {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// A switch section can have more than one case label. "/>
+                    		<Run Text="// A switch section can have more than one case label. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" 0:"/>
+                    		<Run Text=" 0:" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" 1:"/>
+                    		<Run Text=" 1:" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
+                    		<Run Text="Console" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
+                    		<Run Text=".WriteLine(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Case 0 or 1&quot;"/>
+                    		<Run Text="&quot;Case 0 or 1&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// Most switch sections contain a jump statement, such as "/>
+                    		<Run Text="// Most switch sections contain a jump statement, such as " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
-                    	</Span>
-                    	<Span Foreground="Green">
-                    		<Run Text="// a break, goto, or return. The end of the statement list "/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// must be unreachable. "/>
+                    		<Run Text="// a break, goto, or return. The end of the statement list " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="break"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=";"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                "/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="case"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=" 2:"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                    "/>
-                    	</Span>
-                    	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Case 2&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                    "/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="break"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=";"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// The following line causes a warning."/>
+                    		<Run Text="// must be unreachable. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="break" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="                " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="case" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" 2:" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
+                    		<Run Text="Console" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
+                    		<Run Text=".WriteLine(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Unreachable code&quot;"/>
+                    		<Run Text="&quot;Case 2&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                    " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="break" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// 7 - 4 in the following line evaluates to 3. "/>
+                    		<Run Text="// The following line causes a warning." />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="case"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=" 7 - 4:"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
+                    		<Run Text="Console" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
+                    		<Run Text=".WriteLine(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Case 3&quot;"/>
+                    		<Run Text="&quot;Unreachable code&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="break"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=";"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// If the value of switchExpression is not 0, 1, 2, or 3, the "/>
+                    		<Run Text="// 7 - 4 in the following line evaluates to 3. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="case" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" 7 - 4:" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="                    " />
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="Console" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".WriteLine(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Case 3&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="                    " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="break" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// default case is executed. "/>
+                    		<Run Text="// If the value of switchExpression is not 0, 1, 2, or 3, the " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="default"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=":"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                    "/>
-                    	</Span>
-                    	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Default case (optional)&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// You cannot &quot;fall through&quot; any switch section, including"/>
+                    		<Run Text="// default case is executed. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="default" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=":" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="                    " />
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="Console" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".WriteLine(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Default case (optional)&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// the last one. "/>
+                    		<Run Text="// You cannot &quot;fall through&quot; any switch section, including" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="break"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=";"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="            }"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="            "/>
-                    	</Span>
-                    	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=".WriteLine();"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//Example 2"/>
+                    		<Run Text="// the last one. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
-                    	</Span>
-                    	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Example 2:&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="            "/>
-                    	</Span>
-                    	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Coffee sizes: 1=small 2=medium 3=large&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="            "/>
-                    	</Span>
-                    	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=".Write("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Please enter your selection: &quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="string"/>
+                    		<Run Text="break" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" str = "/>
+                    		<Run Text=";" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            }" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
+                    		<Run Text="Console" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=".ReadLine();"/>
+                    		<Run Text=".WriteLine();" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="int"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=" cost = 0;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// Notice the goto statements in cases 2 and 3. The base cost of 25 "/>
+                    		<Run Text="//Example 2" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="Console" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".WriteLine(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Example 2:&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            " />
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="Console" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".WriteLine(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Coffee sizes: 1=small 2=medium 3=large&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            " />
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="Console" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".Write(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Please enter your selection: &quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="string" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" str = " />
+                    	</Span>
+                    	<Span Foreground="#FF2B91AF">
+                    		<Run Text="Console" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=".ReadLine();" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            " />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="int" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" cost = 0;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// cents is added to the additional cost for the medium and large sizes. "/>
+                    		<Run Text="// Notice the goto statements in cases 2 and 3. The base cost of 25 " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
+                    	</Span>
+                    	<Span Foreground="Green">
+                    		<Run Text="// cents is added to the additional cost for the medium and large sizes. " />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="switch"/>
+                    		<Run Text="switch" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (str)"/>
+                    		<Run Text=" (str)" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            {"/>
+                    		<Run Text="            {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;1&quot;"/>
+                    		<Run Text="&quot;1&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=":"/>
+                    		<Run Text=":" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;small&quot;"/>
+                    		<Run Text="&quot;small&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=":"/>
+                    		<Run Text=":" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    cost += 25;"/>
+                    		<Run Text="                    cost += 25;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="break"/>
+                    		<Run Text="break" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=";"/>
+                    		<Run Text=";" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;2&quot;"/>
+                    		<Run Text="&quot;2&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=":"/>
+                    		<Run Text=":" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;medium&quot;"/>
+                    		<Run Text="&quot;medium&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=":"/>
+                    		<Run Text=":" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    cost += 25;"/>
+                    		<Run Text="                    cost += 25;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="goto"/>
+                    		<Run Text="goto" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;1&quot;"/>
+                    		<Run Text="&quot;1&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=";"/>
+                    		<Run Text=";" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;3&quot;"/>
+                    		<Run Text="&quot;3&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=":"/>
+                    		<Run Text=":" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;large&quot;"/>
+                    		<Run Text="&quot;large&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=":"/>
+                    		<Run Text=":" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    cost += 50;"/>
+                    		<Run Text="                    cost += 50;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="goto"/>
+                    		<Run Text="goto" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="case"/>
+                    		<Run Text="case" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;1&quot;"/>
+                    		<Run Text="&quot;1&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=";"/>
+                    		<Run Text=";" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="default"/>
+                    		<Run Text="default" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=":"/>
+                    		<Run Text=":" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
+                    		<Run Text="Console" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
+                    		<Run Text=".WriteLine(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Invalid selection. Please select 1, 2, or 3.&quot;"/>
+                    		<Run Text="&quot;Invalid selection. Please select 1, 2, or 3.&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                    "/>
+                    		<Run Text="                    " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="break"/>
+                    		<Run Text="break" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=";"/>
+                    		<Run Text=";" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            }"/>
+                    		<Run Text="            }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (cost != 0)"/>
+                    		<Run Text=" (cost != 0)" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            {"/>
+                    		<Run Text="            {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="                "/>
+                    		<Run Text="                " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
+                    		<Run Text="Console" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
+                    		<Run Text=".WriteLine(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Please insert {0} cents.&quot;"/>
+                    		<Run Text="&quot;Please insert {0} cents.&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", cost);"/>
+                    		<Run Text=", cost);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            }"/>
+                    		<Run Text="            }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Console"/>
+                    		<Run Text="Console" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=".WriteLine("/>
+                    		<Run Text=".WriteLine(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Thank you for your business.&quot;"/>
+                    		<Run Text="&quot;Thank you for your business.&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        }"/>
+                    		<Run Text="        }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    }"/>
+                    		<Run Text="    }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="}"/>
+                    		<Run Text="}" />
                     	</Span>
                 </TextBlock>
             </StackPanel>
-            </ScrollViewer>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+
+        </StackPanel>
+    
     </Grid>
 </Page>

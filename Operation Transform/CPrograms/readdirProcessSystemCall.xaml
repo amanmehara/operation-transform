@@ -1,286 +1,304 @@
-﻿<Page
-    x:Class="Operation_Transform.CPrograms.readdirProcessSystemCall"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.CPrograms"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.CPrograms.readdirProcessSystemCall"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
+            <TextBlock Style="{StaticResource ProgramMenuHeader}"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
-                <Run Text="readdir"/>
-                <Run Text=" (Process System Call)" FontSize="24"/>
+                <Run Text="readdir" />
+                <Run Text=" (Process System Call)"
+                     FontSize="24" />
             </TextBlock>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
                     	<Run Text="readdir.c" />
-                    </TextBlock>
+                </TextBlock>
                 <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;dirent.h&gt;"/>
+                    		<Run Text="&lt;dirent.h&gt;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;stdio.h&gt;"/>
+                    		<Run Text="&lt;stdio.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;stdlib.h&gt;"/>
+                    		<Run Text="&lt;stdlib.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" main("/>
+                    		<Run Text=" main(" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argc"/>
+                    		<Run Text="argc" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", "/>
+                    		<Run Text=", " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="char"/>
+                    		<Run Text="char" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" *"/>
+                    		<Run Text=" *" />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argv"/>
+                    		<Run Text="argv" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[])"/>
+                    		<Run Text="[])" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="{}{"/>
+                    		<Run Text="{}{" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="struct"/>
+                    		<Run Text="struct" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="dirent"/>
+                    		<Run Text="dirent" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" *dptr;"/>
+                    		<Run Text=" *dptr;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;DIR *dname;"/>
+                    		<Run Text="&#x9;DIR *dname;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" ("/>
+                    		<Run Text=" (" />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argc"/>
+                    		<Run Text="argc" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" != 2) {"/>
+                    		<Run Text=" != 2) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Insufficient Arguments \n&quot;"/>
+                    		<Run Text="&quot;Insufficient Arguments \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Other Arguments Required : \n&quot;"/>
+                    		<Run Text="&quot;Other Arguments Required : \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Directory Name \n&quot;"/>
+                    		<Run Text="&quot;Directory Name \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;exit(-1);"/>
+                    		<Run Text="&#x9;&#x9;exit(-1);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" ((dname = opendir("/>
+                    		<Run Text=" ((dname = opendir(" />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argv"/>
+                    		<Run Text="argv" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[1])) == "/>
+                    		<Run Text="[1])) == " />
                     	</Span>
                     	<Span Foreground="#FF6F008A">
-                    		<Run Text="NULL"/>
+                    		<Run Text="NULL" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=") {"/>
+                    		<Run Text=") {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;perror("/>
+                    		<Run Text="&#x9;&#x9;perror(" />
                     	</Span>
                     	<Span Foreground="Gray">
-                    		<Run Text="argv"/>
+                    		<Run Text="argv" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[1]);"/>
+                    		<Run Text="[1]);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;exit(-1);"/>
+                    		<Run Text="&#x9;&#x9;exit(-1);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="while"/>
+                    		<Run Text="while" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (dptr = readdir(dname)) {"/>
+                    		<Run Text=" (dptr = readdir(dname)) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;%s \n&quot;"/>
+                    		<Run Text="&quot;%s \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", dptr-&gt;d_name);"/>
+                    		<Run Text=", dptr-&gt;d_name);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;closedir(dname);"/>
+                    		<Run Text="&#x9;closedir(dname);" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;printf("/>
+                    		<Run Text="&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;\n&quot;"/>
+                    		<Run Text="&quot;\n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="return"/>
+                    		<Run Text="return" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" 0;"/>
+                    		<Run Text=" 0;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="}"/>
+                    		<Run Text="}" />
                     	</Span>
                 </TextBlock>
             </StackPanel>
-            </ScrollViewer>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
     </Grid>
 </Page>

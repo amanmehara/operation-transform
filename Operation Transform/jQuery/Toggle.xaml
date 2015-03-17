@@ -1,41 +1,44 @@
-﻿<Page
-    x:Class="Operation_Transform.jQuery.Toggle"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.jQuery"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.jQuery.Toggle"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.jQuery"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
             <TextBlock Text="Toggle"
-                       Style="{StaticResource ProgramMenuHeader}" 
-                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                       Style="{StaticResource ProgramMenuHeader}"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
                     	<Run Text="Toggle.js" />
-                    </TextBlock>
-                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                </TextBlock>
+                <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="Black">
                     		<Run Text="$" />
                     	</Span>
@@ -133,11 +136,11 @@
                     	<Span Foreground="#FF1E7C70">
                     		<Run Text="});" />
                     	</Span>
-                    </TextBlock>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                </TextBlock>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
                     	<Run Text="Toggle.css" />
-                    </TextBlock>
-                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                </TextBlock>
+                <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="#FF823125">
                     		<Run Text="body" />
                     	</Span>
@@ -494,11 +497,11 @@
                     	<Span Foreground="#FF222222">
                     		<Run Text="}" />
                     	</Span>
-                    </TextBlock>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+                </TextBlock>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
                     	<Run Text="Toggle.html" />
-                    </TextBlock>
-                    <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                </TextBlock>
+                <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="#FF4F76AC">
                     		<Run Text="&lt;" />
                     	</Span>
@@ -831,8 +834,22 @@
                     	<Span Foreground="#FF4F76AC">
                     		<Run Text="&gt;" />
                     	</Span>
-                    </TextBlock>
-                </StackPanel>
-            </ScrollViewer>
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
     </Grid>
 </Page>

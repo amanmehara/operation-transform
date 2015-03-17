@@ -1,278 +1,296 @@
-﻿<Page
-    x:Class="Operation_Transform.CPrograms.forkProcessSystemCall"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.CPrograms"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.CPrograms.forkProcessSystemCall"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Style="{StaticResource ProgramMenuHeader}" 
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
+            <TextBlock Style="{StaticResource ProgramMenuHeader}"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
-                <Run Text="fork"/>
-                <Run Text=" (Process System Call)" FontSize="24"/>
+                <Run Text="fork" />
+                <Run Text=" (Process System Call)"
+                     FontSize="24" />
             </TextBlock>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}">
                     	<Run Text="fork.c" />
-                    </TextBlock>
+                </TextBlock>
                 <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;stdio.h&gt;"/>
+                    		<Run Text="&lt;stdio.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;stdlib.h&gt;"/>
+                    		<Run Text="&lt;stdlib.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;sys/types.h&gt;"/>
+                    		<Run Text="&lt;sys/types.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="#include"/>
+                    		<Run Text="#include" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&lt;unistd.h&gt;"/>
+                    		<Run Text="&lt;unistd.h&gt;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" main()"/>
+                    		<Run Text=" main()" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="{}{"/>
+                    		<Run Text="{}{" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;pid_t pid;"/>
+                    		<Run Text="&#x9;pid_t pid;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
-                    	</Span>
-                    	<Span Foreground="Blue">
-                    		<Run Text="int"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=" x = 5;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;pid = fork();"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;x++;"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (pid == -1) {"/>
+                    		<Run Text=" x = 5;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;pid = fork();" />
                     	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Process Creation Error. \n&quot;"/>
-                    	</Span>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text="&#x9;x++;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;exit(-1);"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="else"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" (pid == -1) {" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Process Creation Error. \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;exit(-1);" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="if"/>
+                    		<Run Text="else" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" (!pid) {"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Child Process : \n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=");"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Process ID (Child) is %d \n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=", getpid());"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Value of x is %d \n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=", x);"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
-                    	</Span>
-                    	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Process ID of Parent is %d \n&quot;"/>
-                    	</Span>
-                    	<Span Foreground="Black">
-                    		<Run Text=", getppid());"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
-                    	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
-                    	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="else"/>
+                    		<Run Text="if" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" {"/>
+                    		<Run Text=" (!pid) {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Parent Process : \n&quot;"/>
+                    		<Run Text="&quot;Child Process : \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=");"/>
+                    		<Run Text=");" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Process ID (Parent) is %d \n&quot;"/>
+                    		<Run Text="&quot;Process ID (Child) is %d \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", getpid());"/>
+                    		<Run Text=", getpid());" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Value of x is %d \n&quot;"/>
+                    		<Run Text="&quot;Value of x is %d \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", x);"/>
+                    		<Run Text=", x);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;&#x9;printf("/>
+                    		<Run Text="&#x9;&#x9;printf(" />
                     	</Span>
                     	<Span Foreground="#FFA31515">
-                    		<Run Text="&quot;Process ID of Shell is %d \n&quot;"/>
+                    		<Run Text="&quot;Process ID of Parent is %d \n&quot;" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=", getppid());"/>
+                    		<Run Text=", getppid());" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;}"/>
+                    		<Run Text="&#x9;}" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="&#x9;"/>
+                    		<Run Text="&#x9;" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="return"/>
+                    		<Run Text="else" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" 0;"/>
+                    		<Run Text=" {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="}"/>
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Parent Process : \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=");" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Process ID (Parent) is %d \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", getpid());" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Value of x is %d \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", x);" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;&#x9;printf(" />
+                    	</Span>
+                    	<Span Foreground="#FFA31515">
+                    		<Run Text="&quot;Process ID of Shell is %d \n&quot;" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=", getppid());" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;}" />
+                    	</Span>
+                    	<LineBreak />
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="&#x9;" />
+                    	</Span>
+                    	<Span Foreground="Blue">
+                    		<Run Text="return" />
+                    	</Span>
+                    	<Span Foreground="Black">
+                    		<Run Text=" 0;" />
+                    	</Span>
+                    	<LineBreak />
+                    	<Span Foreground="Black">
+                    		<Run Text="}" />
                     	</Span>
                 </TextBlock>
             </StackPanel>
-            </ScrollViewer>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
     </Grid>
 </Page>

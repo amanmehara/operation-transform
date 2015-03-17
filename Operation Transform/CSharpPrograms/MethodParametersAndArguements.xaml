@@ -1,322 +1,339 @@
-﻿<Page
-    x:Class="Operation_Transform.CSharpPrograms.MethodParametersAndArguements"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Operation_Transform.CSharpPrograms"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="Operation_Transform.CSharpPrograms.MethodParametersAndArguements"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CSharpPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot"
           Background="{StaticResource ApplicationBackgroundColor}">
 
         <Grid.ChildrenTransitions>
             <TransitionCollection>
-                <EntranceThemeTransition/>
+                <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
             <TextBlock Text="Parameter &amp; Arguement"
-                       Style="{StaticResource ProgramMenuHeader}" 
-                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+                       Style="{StaticResource ProgramMenuHeader}"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
-                               Text="Program.cs"/>
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                           Text="Program.cs" />
                 <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System;"/>
+                    		<Run Text=" System;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Collections.Generic;"/>
+                    		<Run Text=" System.Collections.Generic;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Linq;"/>
+                    		<Run Text=" System.Linq;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Text;"/>
+                    		<Run Text=" System.Text;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="using"/>
+                    		<Run Text="using" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" System.Threading.Tasks;"/>
+                    		<Run Text=" System.Threading.Tasks;" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Blue">
-                    		<Run Text="namespace"/>
+                    		<Run Text="namespace" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" MethodParametersAndArguements"/>
+                    		<Run Text=" MethodParametersAndArguements" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="{}{"/>
+                    		<Run Text="{}{" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    "/>
+                    		<Run Text="    " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="class"/>
+                    		<Run Text="class" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="#FF2B91AF">
-                    		<Run Text="Program"/>
+                    		<Run Text="Program" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    {"/>
+                    		<Run Text="    {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        "/>
+                    		<Run Text="        " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="static"/>
+                    		<Run Text="static" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="void"/>
+                    		<Run Text="void" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" Main("/>
+                    		<Run Text=" Main(" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="string"/>
+                    		<Run Text="string" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text="[] args)"/>
+                    		<Run Text="[] args)" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        {"/>
+                    		<Run Text="        {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" numA = 4;"/>
+                    		<Run Text=" numA = 4;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// Call with an int variable. "/>
+                    		<Run Text="// Call with an int variable. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" productA = Square(numA);"/>
+                    		<Run Text=" productA = Square(numA);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//numA is the arguement"/>
+                    		<Run Text="//numA is the arguement" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" numB = 32;"/>
+                    		<Run Text=" numB = 32;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// Call with another int variable. "/>
+                    		<Run Text="// Call with another int variable. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" productB = Square(numB);"/>
+                    		<Run Text=" productB = Square(numB);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//numB is the arguement"/>
+                    		<Run Text="//numB is the arguement" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// Call with an integer literal. "/>
+                    		<Run Text="// Call with an integer literal. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" productC = Square(12);"/>
+                    		<Run Text=" productC = Square(12);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//12 is the arguement"/>
+                    		<Run Text="//12 is the arguement" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// Call with an expression that evaulates to int."/>
+                    		<Run Text="// Call with an expression that evaulates to int." />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            productC = Square(productA * 3);"/>
+                    		<Run Text="            productC = Square(productA * 3);" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//(productA * 3) is an arguement"/>
+                    		<Run Text="//(productA * 3) is an arguement" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        }"/>
+                    		<Run Text="        }" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        "/>
+                    		<Run Text="        " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="//i is the parameter"/>
+                    		<Run Text="//i is the parameter" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        "/>
+                    		<Run Text="        " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="static"/>
+                    		<Run Text="static" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" "/>
+                    		<Run Text=" " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" Square("/>
+                    		<Run Text=" Square(" />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" i)"/>
+                    		<Run Text=" i)" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        {"/>
+                    		<Run Text="        {" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Green">
-                    		<Run Text="// Store input argument in a local variable. "/>
+                    		<Run Text="// Store input argument in a local variable. " />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="int"/>
+                    		<Run Text="int" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" input = i;"/>
+                    		<Run Text=" input = i;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="            "/>
+                    		<Run Text="            " />
                     	</Span>
                     	<Span Foreground="Blue">
-                    		<Run Text="return"/>
+                    		<Run Text="return" />
                     	</Span>
                     	<Span Foreground="Black">
-                    		<Run Text=" input * input;"/>
+                    		<Run Text=" input * input;" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="        }"/>
+                    		<Run Text="        }" />
                     	</Span>
-                    	<LineBreak/>
-                    	<LineBreak/>
+                    	<LineBreak />
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="    }"/>
+                    		<Run Text="    }" />
                     	</Span>
-                    	<LineBreak/>
+                    	<LineBreak />
                     	<Span Foreground="Black">
-                    		<Run Text="}"/>
+                    		<Run Text="}" />
                     	</Span>
                 </TextBlock>
             </StackPanel>
-            </ScrollViewer>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+        
     </Grid>
 </Page>

@@ -191,6 +191,7 @@
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
     <MainPackageIdentityName>33294AmanMehara.CProgrammingLanguage</MainPackageIdentityName>
+    <MainPackageIdentityName>33294AmanMehara.50868F4EFFA4A</MainPackageIdentityName>
     <MainPackageIdentityName>33294AmanMehara.CPrograms</MainPackageIdentityName>
     <MainPackageIdentityName>33294AmanMehara.41009C99DBDF9</MainPackageIdentityName>
     <MainPackageIdentityName>33294AmanMehara.Calculator</MainPackageIdentityName>
@@ -222,7 +223,7 @@
     <PackageInfo>
       <OsMinVersion>6.3.0.0</OsMinVersion>
       <PackageArchitecture>neutral</PackageArchitecture>
-      <PackageMaxArchitectureVersion>1.2.0.1</PackageMaxArchitectureVersion>
+      <PackageMaxArchitectureVersion>2.3.1.3</PackageMaxArchitectureVersion>
     </PackageInfo>
   </PackageInfoList>
 </StoreAssociation>
