@@ -1,0 +1,284 @@
+﻿<Page x:Class="Operation_Transform.CPrograms.SimpleInterestAndAmount"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform.CPrograms"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
+            <TextBlock Text="Simple Interest &amp; Amount"
+                       Style="{StaticResource ProgramMenuHeader}"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                           Text="SimpleInterestAndAmount.c" />
+                <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                	<Span Foreground="Blue">
+                		<Run Text="#include" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" " />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&lt;stdio.h&gt;" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" main() {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Simple Interest &amp; Amount \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="float" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" principal, rate, simpleInterest, amount;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" time;" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Principal \t: &quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;scanf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;%f&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", &amp;principal);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Interest Rate \t: &quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;scanf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;%f&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", &amp;rate);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Time (yrs) \t: &quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;scanf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;%d&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", &amp;time);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Simple Interest = (Principal * Rate * Time) / 100 \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;simpleInterest = (principal*rate*time) / 100;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Simple Interest = %.2f \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", simpleInterest);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Total Amount = Principal + Simple Interest \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;amount = principal + simpleInterest;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Total Amount = %.2f \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", amount);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="return" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" 0;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="}" />
+                	</Span>
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
+    </Grid>
+</Page>

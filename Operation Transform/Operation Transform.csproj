@@ -125,6 +125,9 @@
     <Compile Include="CPrograms\ArithmeticProgression.xaml.cs">
       <DependentUpon>ArithmeticProgression.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\BinarySearch.xaml.cs">
+      <DependentUpon>BinarySearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\BubbleSort.xaml.cs">
       <DependentUpon>BubbleSort.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,9 @@
     </Compile>
     <Compile Include="CPrograms\execProcessSystemCall.xaml.cs">
       <DependentUpon>execProcessSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\FibonacciSeries.xaml.cs">
+      <DependentUpon>FibonacciSeries.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\FirstComeFirstServeScheduling.xaml.cs">
       <DependentUpon>FirstComeFirstServeScheduling.xaml</DependentUpon>
@@ -158,6 +164,9 @@
     <Compile Include="CPrograms\InsertionSort.xaml.cs">
       <DependentUpon>InsertionSort.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\InterpolationSearch.xaml.cs">
+      <DependentUpon>InterpolationSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\isEven.xaml.cs">
       <DependentUpon>isEven.xaml</DependentUpon>
     </Compile>
@@ -167,17 +176,29 @@
     <Compile Include="CPrograms\isPrime.xaml.cs">
       <DependentUpon>isPrime.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\IterativeFactorial.xaml.cs">
+      <DependentUpon>IterativeFactorial.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\LeapYear.xaml.cs">
       <DependentUpon>LeapYear.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CPrograms\LinearSearch.xaml.cs">
+      <DependentUpon>LinearSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CPrograms\lsCommandSimulation.xaml.cs">
       <DependentUpon>lsCommandSimulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\MergeSort.xaml.cs">
+      <DependentUpon>MergeSort.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\NumberReversal.xaml.cs">
       <DependentUpon>NumberReversal.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\openFileSystemCall.xaml.cs">
       <DependentUpon>openFileSystemCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\PascalTriangle.xaml.cs">
+      <DependentUpon>PascalTriangle.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\PriorityScheduling.xaml.cs">
       <DependentUpon>PriorityScheduling.xaml</DependentUpon>
@@ -220,6 +241,9 @@
     </Compile>
     <Compile Include="CPrograms\ShortestJobFirstScheduling.xaml.cs">
       <DependentUpon>ShortestJobFirstScheduling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\SimpleInterestAndAmount.xaml.cs">
+      <DependentUpon>SimpleInterestAndAmount.xaml</DependentUpon>
     </Compile>
     <Compile Include="CPrograms\SortingArrayUsing2Stacks.xaml.cs">
       <DependentUpon>SortingArrayUsing2Stacks.xaml</DependentUpon>
@@ -340,6 +364,9 @@
     </Compile>
     <Compile Include="CSharpPrograms\WhileLoop.xaml.cs">
       <DependentUpon>WhileLoop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPrograms\HeapSort.xaml.cs">
+      <DependentUpon>HeapSort.xaml</DependentUpon>
     </Compile>
     <Compile Include="JavaPrograms\ArithmeticProgression.xaml.cs">
       <DependentUpon>ArithmeticProgression.xaml</DependentUpon>
@@ -492,6 +519,9 @@
       <DependentUpon>Sqrt.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CPrograms\QuickSort.xaml.cs">
+      <DependentUpon>QuickSort.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SQLScripts\AlterDatabase.xaml.cs">
       <DependentUpon>AlterDatabase.xaml</DependentUpon>
     </Compile>
@@ -605,6 +635,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CPrograms\BinarySearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CPrograms\BubbleSort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -622,6 +656,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\execProcessSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\FibonacciSeries.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -649,6 +687,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CPrograms\InterpolationSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CPrograms\isEven.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -661,11 +703,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CPrograms\IterativeFactorial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CPrograms\LeapYear.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CPrograms\LinearSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CPrograms\lsCommandSimulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\MergeSort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -674,6 +728,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\openFileSystemCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\PascalTriangle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -730,6 +788,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CPrograms\ShortestJobFirstScheduling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\SimpleInterestAndAmount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -890,6 +952,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CSharpPrograms\WhileLoop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\HeapSort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1090,6 +1156,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PHPScripts\Sqrt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPrograms\QuickSort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

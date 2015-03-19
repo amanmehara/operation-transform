@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="33294AmanMehara.Programming" Publisher="CN=CA602E8B-3F8D-4B67-8346-FCB9C150FA74" Version="3.2.0.4" />
+  <Identity Name="33294AmanMehara.Programming" Publisher="CN=CA602E8B-3F8D-4B67-8346-FCB9C150FA74" Version="3.2.0.5" />
   <mp:PhoneIdentity PhoneProductId="f12598ce-95c7-46bf-8e47-79fbbcb94ebc" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Programming!</DisplayName>

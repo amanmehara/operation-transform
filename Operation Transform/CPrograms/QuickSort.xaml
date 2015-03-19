@@ -1,0 +1,786 @@
+﻿<Page x:Class="Operation_Transform.CPrograms.QuickSort"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:Operation_Transform"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot"
+          Background="{StaticResource ApplicationBackgroundColor}">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition x:Name="AdsSection"
+                           Height="50" />
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0"
+                    Margin="19,0,0,0">
+            <TextBlock Text="Quick Sort"
+                       Style="{StaticResource ProgramMenuHeader}"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <ScrollViewer Style="{StaticResource ProgramScrollViewer}">
+            <StackPanel>
+                <TextBlock Style="{StaticResource ProgramFileNameTextBlock}"
+                           Text="QuickSort.c" />
+                <TextBlock Style="{StaticResource ProgramCodeTextBlock}">
+                	<Span Foreground="Blue">
+                		<Run Text="#include" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" " />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&lt;stdio.h&gt;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="#include" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" " />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&lt;stdlib.h&gt;" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" partition(" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" *A, " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" p, " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" r);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="void" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" quickSort(" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" *A, " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" p, " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" r);" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" main() {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Quick Sort \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" i, n;" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Total Elements : &quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;scanf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;%d&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", &amp;n);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="if" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" (n &lt; 1) {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Invalid Input \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="return" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" 1;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" *A = (" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" *)calloc(n, " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="sizeof" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text="(" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text="));" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Unsorted Input \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="for" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" (i = 0; i &lt; n; i++) {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;scanf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;%d&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", (A + i));" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;quickSort(A, 0, (n - 1));" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;Sorted Output \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="for" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" (i = 0; i &lt; n; i++) {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;%d \n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", *(A + i));" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;printf(" />
+                	</Span>
+                	<Span Foreground="#FFA31515">
+                		<Run Text="&quot;\n&quot;" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="return" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" 0;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="}" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" partition(" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" *" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="p" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=") {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" x = *(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" i = " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="p" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" - 1;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" temp;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="for" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" (" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" j = " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="p" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text="; j &lt; " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text="; j++) {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="if" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" (*(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + j) &lt;= x) {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;&#x9;i++;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;&#x9;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;&#x9;" />
+                	</Span>
+                	<Span Foreground="Green">
+                		<Run Text="//swap" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;&#x9;temp = *(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + i);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;&#x9;*(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + i) = *(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + j);" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;&#x9;*(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + j) = temp;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Green">
+                		<Run Text="//swap" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;temp = *(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + (i + 1));" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;*(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + (i + 1)) = *(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;*(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" + " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=") = temp;" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="return" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" i + 1;" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="}" />
+                	</Span>
+                	<LineBreak />
+                	<LineBreak />
+                	<Span Foreground="Blue">
+                		<Run Text="void" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" quickSort(" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" *" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="p" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=") {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="if" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" (" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="p" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" &lt; " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=") {" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;" />
+                	</Span>
+                	<Span Foreground="Blue">
+                		<Run Text="int" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=" q = partition(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="p" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;quickSort(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="p" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", (q - 1));" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;&#x9;quickSort(" />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="A" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=", (q + 1), " />
+                	</Span>
+                	<Span Foreground="Gray">
+                		<Run Text="r" />
+                	</Span>
+                	<Span Foreground="Black">
+                		<Run Text=");" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="&#x9;}" />
+                	</Span>
+                	<LineBreak />
+                	<Span Foreground="Black">
+                		<Run Text="}" />
+                	</Span>
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                    Grid.Row="2">
+            <UI:AdControl x:Name="AdBanner320x50"
+                          AutoRefreshIntervalInSeconds="60"
+                          ApplicationId="aeb15bd5-cb59-44db-af83-53e98f992b63"
+                          AdUnitId="209210"
+                          HorizontalAlignment="Center"
+                          Height="50"
+                          IsAutoRefreshEnabled="True"
+                          VerticalAlignment="Center"
+                          Width="320" />
+        </StackPanel>
+
+    </Grid>
+</Page>

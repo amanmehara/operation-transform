@@ -27,7 +27,7 @@
         <!-- Title Panel -->
         <StackPanel Grid.Row="0"
                     Margin="19,0,0,0">
-            <TextBlock Text="Hello World"
+            <TextBlock Text="Number Reversal"
                        Style="{StaticResource ProgramMenuHeader}"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
