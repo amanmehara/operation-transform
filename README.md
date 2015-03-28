@@ -5,4 +5,4 @@
 
 ![Programming!](/Operation%20Transform/Assets/StoreLogo.scale-240.png)
 
-####Programing! for Windows Phone *(Codenamed 'Operation Transform')*
+####Programming! for Windows Phone *(Codenamed 'Operation Transform')*
